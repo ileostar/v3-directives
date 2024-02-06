@@ -1,0 +1,46 @@
+{
+  "name": "v3-directives",
+  "version": "1.0.0",
+  "packageManager": "pnpm@8.15.1",
+  "description": "Custom Vue3 directives",
+  "author": "ileostar <hi@leostar.top> (https://github.com/ileostar)",
+  "license": "MIT",
+  "homepage": "https://github.com/antfu/eslint-config",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsup --format esm,cjs --clean --dts",
+    "stub": "tsup --format esm",
+    "dev": "tsup --format esm,cjs --watch & eslint-flat-config-viewer",
+    "watch": "tsup --format esm,cjs --watch",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "typecheck": "tsc --noEmit",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "keywords": [
+    "v3",
+    "directives"
+  ],
+  "devDependencies": {
+    "@vitest/ui": "^1.2.2",
+    "esno": "^4.0.0",
+    "lint-staged": "^15.2.2",
+    "simple-git-hooks": "^2.9.0",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3",
+    "vitepress": "1.0.0-rc.41",
+    "vitest": "^1.2.2"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  },
+  "dependencies": {
+    "vue": "^3.4.15",
+    "vue-router": "^4.2.5"
+  }
+}
