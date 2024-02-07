@@ -31,6 +31,7 @@
     "start": "esno src/index.ts",
     "test": "vitest",
     "test:ui": "vitest --ui",
+    "lint": "eslint src/directives/**/*.ts",
     "fix": "eslint src/**/*.*  --fix",
     "typecheck": "tsc --noEmit",
     "docs:dev": "vitepress dev docs",
