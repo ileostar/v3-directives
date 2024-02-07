@@ -1,12 +1,12 @@
 import { App, Directive } from 'vue'
-import vCopy from './directive/v-copy'
+import copy from './directive/v-copy'
 
 interface DirectiveCollection {
   [key: string]: Directive
 }
 
 const directives: DirectiveCollection = {
-  vCopy,
+  copy,
 }
 
 export default {

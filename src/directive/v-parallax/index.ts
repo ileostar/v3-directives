@@ -1,8 +1,8 @@
 /**
  * @description: v-copy指令
  * @LastEditors: ileostar
- * @LastEditTime: 2024/02/07 11:12:16
- * @description: 实现文本复制到剪贴板功能
+ * @LastEditTime: 2021-08-27 10:22:59
+ * @description: 用于实现视差效果，使元素在滚动时以不同的速度移动
  */
 
 import { Directive, DirectiveBinding } from 'vue'

@@ -86,3 +86,5 @@ dist
 # vscode
 .vscode/*
 !.vscode/settings.json
+
+play
