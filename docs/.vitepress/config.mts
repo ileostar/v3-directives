@@ -4,14 +4,14 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "v3-directives",
   description: "Custom Vue3 directives",
-  head: [['link', { rel: 'icon', href: '/logo.png' }]],
+  head: [['link', { rel: 'icon', href: '/logo.svg' }]],
   lastUpdated: true,
   ignoreDeadLinks: 'localhostLinks',
 
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
 
-    logo: '/logo.png',
+    logo: '/logo.svg',
 
     nav: [
       { text: 'Home', link: '/' },

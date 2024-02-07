@@ -14,7 +14,7 @@ hero:
       text: API 案例
       link: /api-examples
   image:
-    src: /logo.png
+    src: /logo.svg
     alt: v3-directives
 
 features:
