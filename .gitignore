@@ -77,7 +77,8 @@ dist
 # Gatsby files
 .cache/
 # vitepress build output
-.vitepress
+docs/.vitepress/cache
+.vitepress/cache
 
 # vuepress v2.x temp and cache directory
 .temp

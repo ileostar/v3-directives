@@ -4,6 +4,7 @@ import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import './style.css'
 
+import VueDirectives from '../../../src'
 export default {
   extends: DefaultTheme,
   Layout: () => {
@@ -12,6 +13,6 @@ export default {
     })
   },
   enhanceApp({ app, router, siteData }) {
-    // ...
+    app.use(VueDirectives);
   }
 } satisfies Theme
