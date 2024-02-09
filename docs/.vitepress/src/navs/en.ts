@@ -1,22 +1,24 @@
 export default function getNavs() {
   return [
-    { text: "Guide", link: "/en/guide" },
-    { text: "All Directives", link: "/en/api" },
+    { text: "Guide", link: "/en/guide/introduce" },
     {
-      text: "About",
+      text: "All Directives",
+      link: '/en/directives/v-copy'
+    },
+    {
+      text: 'Open Source',
       items: [
         {
-          text: "Team",
-          link: "/en/examples/about/team",
-          activeMatch: "/about/team",
+          text: 'Contribute',
+          items: [
+            { text: 'Developer Guide', link: '/en/about/contribution' },
+          ]
         },
         {
-          text: "FAQ",
-          link: "/en/examples/about/problem",
-          activeMatch: "/about/problem",
-        },
-      ],
-      activeMatch: "/en/examples/about/",
-    },
+          text: 'Concerning',
+          items: [{ text: 'Development Team', link: '/en/about/team' }]
+        }
+      ]
+    }
   ]
 };

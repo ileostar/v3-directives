@@ -1,5 +1,4 @@
 import { Directive } from 'vue'
-
 function createYElement(type: 'top' | 'bottom'): HTMLDivElement {
   const Element = document.createElement('div')
   Element.style.position = 'absolute'

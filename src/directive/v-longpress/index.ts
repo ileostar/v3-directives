@@ -1,3 +1,9 @@
+/**
+ * @description: v-longpress指令
+ * @LastEditors: ileostar
+ * @LastEditTime: 2024/02/07 11:12:16
+ * @description: 长按触发事件
+ */
 import { Directive, DirectiveBinding } from 'vue'
 import { isFunction } from '../../utils'
 

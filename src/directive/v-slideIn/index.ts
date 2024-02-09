@@ -21,7 +21,7 @@ function isBelowViewport(el: HTMLElement) {
   return rect.top - (distance || DISTANCE) > window.innerHeight;
 }
 
-const vUpMotion: Directive ={
+const vSlideIn: Directive ={
   mounted(el: HTMLElement, binding: any) {
     if (binding.value) { // 传值？
       console.log(binding.value);// 打印
@@ -58,4 +58,4 @@ const vUpMotion: Directive ={
   },
 }
 
-export default vUpMotion
+export default vSlideIn
