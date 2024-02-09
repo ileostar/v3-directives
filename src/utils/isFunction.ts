@@ -1,3 +1,3 @@
-export const isFunction = (value: any): boolean => {
+export default function(value: any): boolean {
   return typeof value === 'function'
 }

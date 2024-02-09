@@ -1,5 +1,5 @@
 /**
- * @description: v-clickOut指令
+ * @description: v-clickOutside指令
  * @LastEditors: ileostar
  * @LastEditTime: 2024/02/07 11:12:16
  * @description: 窗口点击外部事件

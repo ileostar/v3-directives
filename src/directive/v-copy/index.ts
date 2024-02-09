@@ -16,10 +16,10 @@ const addEventListener = (el: Element, binding: DirectiveBinding) => {
     navigator.clipboard
       .writeText(el.getAttribute('copyValue') || '')
       .then(() => {
-        window.alert('Copy successful')
+        window.alert('复制成功！')
       })
       .catch(() => {
-        window.alert('Copy failed')
+        window.alert('复制失败！')
       })
   }
 

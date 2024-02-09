@@ -44,11 +44,13 @@
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
+    "@floating-ui/dom": "^1.6.1",
     "vue": "^3.4.15",
     "vue-router": "^4.2.5"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.6.4",
+    "@types/node": "^20.11.17",
     "@vitest/ui": "^1.2.2",
     "bumpp": "^9.3.0",
     "eslint": "^8.56.0",

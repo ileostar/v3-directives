@@ -1,5 +1,5 @@
 import { Directive, DirectiveBinding } from 'vue'
-import { isFunction } from '../../utils/isFunction'
+import { isFunction } from '../../utils/index'
 
 const elMapToHandlers: WeakMap<Element, () => void> = new WeakMap()
 
