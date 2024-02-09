@@ -8,11 +8,14 @@ hero:
   tagline: 使 Vue3 开发过程更加简单和高效
   actions:
     - theme: brand
-      text: 开始使用
+      text: 起步
       link: /zh/guide/start
     - theme: alt
-      text: API 案例
+      text: 指令案例
       link: /zh/directives/v-copy
+    - theme: alt
+      text: 前往 Github
+      link: https://github.com/ileostar/v3-directives
   image:
     src: /logo.svg
     alt: v3-directives

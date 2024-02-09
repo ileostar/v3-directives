@@ -8,5 +8,6 @@ export const docsConfig: DocsConfig = {
   description: "Vue3 自定义指令库",
   lang: 'zh-CN',
   lastUpdated: true,
-  appearance: 'dark'
+  appearance: 'dark',
+  outline: [2, 3],
 };

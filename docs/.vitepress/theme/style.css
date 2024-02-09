@@ -43,7 +43,7 @@
  *   in custom container, badges, etc.
  * -------------------------------------------------------------------------- */
 
- :root {
+:root {
   --vp-c-default-1: var(--vp-c-gray-1);
   --vp-c-default-2: var(--vp-c-gray-2);
   --vp-c-default-3: var(--vp-c-gray-3);
@@ -54,10 +54,10 @@
   --vp-c-brand-3: #49f29f;
   --vp-c-brand-soft: #4dffa8;
 
-  --vp-c-tip-1: var(--vp-c-brand-1);
-  --vp-c-tip-2: var(--vp-c-brand-2);
-  --vp-c-tip-3: var(--vp-c-brand-3);
-  --vp-c-tip-soft: var(--vp-c-brand-soft);
+  --vp-c-tip-1: #65ba90;
+  --vp-c-tip-2: #65ba90;
+  --vp-c-tip-3: var(--vp-c-indigo-3);
+  --vp-c-tip-soft: #b5f2d5;
 
   --vp-c-warning-1: var(--vp-c-yellow-1);
   --vp-c-warning-2: var(--vp-c-yellow-2);
@@ -68,23 +68,13 @@
   --vp-c-danger-2: var(--vp-c-red-2);
   --vp-c-danger-3: var(--vp-c-red-3);
   --vp-c-danger-soft: var(--vp-c-red-soft);
+
+  --vp-button-brand-border: rgba(60, 60, 67, .29);
+  --vp-button-alt-border: rgba(60, 60, 67, .29);
+  --vp-button-brand-hover-border: rgba(60, 60, 67, .29);
+  --vp-button-alt-hover-border: rgba(60, 60, 67, .29);
 }
 
-/**
- * Component: Button
- * -------------------------------------------------------------------------- */
-
-:root {
-  --vp-button-brand-border: transparent;
-  --vp-button-brand-text: var(--vp-c-white);
-  --vp-button-brand-bg: var(--vp-c-brand-3);
-  --vp-button-brand-hover-border: transparent;
-  --vp-button-brand-hover-text: var(--vp-c-white);
-  --vp-button-brand-hover-bg: var(--vp-c-brand-2);
-  --vp-button-brand-active-border: transparent;
-  --vp-button-brand-active-text: var(--vp-c-white);
-  --vp-button-brand-active-bg: var(--vp-c-brand-1);
-}
 
 /**
  * Component: Home
@@ -104,6 +94,7 @@
     #7496ad 20%
   );
   --vp-home-hero-image-filter: blur(65px);
+
 }
 
 @media (min-width: 640px) {
@@ -118,26 +109,11 @@
   }
 }
 
-/**
- * Component: Custom Block
- * -------------------------------------------------------------------------- */
 
-:root {
-  --vp-custom-block-tip-border: transparent;
-  --vp-custom-block-tip-text: var(--vp-c-text-1);
-  --vp-custom-block-tip-bg: var(--vp-c-brand-soft);
-  --vp-custom-block-tip-code-bg: var(--vp-c-brand-soft);
-}
 
 /**
- * Component: Algolia
+ * Component: Dark Mode
  * -------------------------------------------------------------------------- */
-
-.DocSearch {
-  --docsearch-primary-color: var(--vp-c-brand-1) !important;
-}
-
-
 .dark:root {
   /* --c-black: #ffffff;
   --c-white: #000000; */
@@ -154,10 +130,15 @@
   --vp-custom-block-tip-text: var(--vp-c-text-1);
   --vp-custom-block-tip-bg: #113236;
   --vp-custom-block-tip-code-bg: var(--vp-c-brand-soft);
+
+  --vp-button-brand-border: rgba(82, 82, 89, .68);
+  --vp-button-alt-border: rgba(82, 82, 89, .68);
+  --vp-button-brand-hover-border: rgba(82, 82, 89, .68);
+  --vp-button-alt-hover-border: rgba(82, 82, 89, .68);
 }
 
 /**
- * Component: Custom Block
+ * Component: Custom Scroll Bar
  * -------------------------------------------------------------------------- */
 ::-webkit-scrollbar {
   /* 这是针对缺省样式 (必须的) */
