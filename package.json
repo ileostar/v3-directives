@@ -59,7 +59,7 @@
     "simple-git-hooks": "^2.9.0",
     "tsup": "^8.0.1",
     "typescript": "^5.3.3",
-    "vitepress": "1.0.0-rc.41",
+    "vitepress": "1.0.0-rc.42",
     "vitest": "^1.2.2"
   },
   "simple-git-hooks": {
