@@ -1,4 +1,4 @@
-import { isBoolean, loadingSvg } from '../../utils'
+import { isBoolean, loadingSvg } from '@/utils'
 import { Directive } from 'vue'
 
 const elMapToMaskElement: WeakMap<Element, HTMLDivElement> = new WeakMap()

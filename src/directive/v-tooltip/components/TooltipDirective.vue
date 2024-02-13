@@ -53,7 +53,7 @@
 import { defineComponent } from 'vue'
 import Popper from './Popper'
 import PopperContent from './PopperContent.vue'
-import { getDefaultConfig } from '../../../utils/config'
+import { getDefaultConfig } from '../@/utils/config'
 import PopperMethods from './PopperMethods'
 
 export default defineComponent({
@@ -171,4 +171,4 @@ export default defineComponent({
   },
 })
 </script>
-../../../utils/config
+../@/utils/config

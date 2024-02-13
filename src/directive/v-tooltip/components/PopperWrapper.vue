@@ -66,7 +66,7 @@ import Popper from './Popper.vue'
 import PopperContent from './PopperContent.vue'
 import PopperMethods from './PopperMethods'
 import ThemeClass from './ThemeClass'
-import type { Placement } from '../../../utils/popper.ts'
+import type { Placement } from '../@/utils/popper.ts'
 
 export type TriggerEvent = 'hover' | 'click' | 'focus' | 'touch'
 
@@ -317,4 +317,4 @@ export default defineComponent({
   },
 })
 </script>
-../../../utils/popper.js
+../@/utils/popper.js

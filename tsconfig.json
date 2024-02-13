@@ -9,7 +9,11 @@
     "sourceMap": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "lib": ["esnext", "dom"]
+    "lib": ["esnext", "dom"],
+    "paths": {
+  		// 设置对应的别名
+      "@/*": ["./src/*"],
+    }
   },
   "include": [
     "src/**/*.ts",

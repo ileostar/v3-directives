@@ -5,7 +5,7 @@
  * @description: 双击触发事件
  */
 import { Directive, DirectiveBinding } from 'vue'
-import { isFunction } from '../../utils'
+import { isFunction } from '@/utils'
 
 const elMapToHandlers: WeakMap<Element, () => void> = new WeakMap()
 
