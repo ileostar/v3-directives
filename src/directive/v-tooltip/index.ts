@@ -1,4 +1,10 @@
-// @ts-nocheck
+/**
+ * @description: v-ellipsis指令
+ * @LastEditors: ileostar
+ * @LastEditTime: 2024/02/07 11:12:16
+ * @description: 省略超出文本
+ */
+
 import { App, createApp, h, Ref, ref } from 'vue'
 import TooltipDirective from './components/TooltipDirective.vue'
 import { getDefaultConfig } from '../../utils/config'

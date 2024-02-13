@@ -1,3 +1,9 @@
+/**
+ * @description: v-draggable指令
+ * @LastEditors: ileostar
+ * @LastEditTime: 2024/02/07 11:12:16
+ * @description: 使元素可拖拽
+ */
 import { Directive } from 'vue'
 
 const vDraggable: Directive = {

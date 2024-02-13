@@ -16,5 +16,6 @@
     "src/**/*.d.ts",
     "src/**/*.tsx",
     "src/**/*.vue"
-  ]
+  ],
+  "exclude": ["node_modules","./src/directive/v-tooltip"]
 }

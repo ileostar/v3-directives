@@ -3,18 +3,18 @@ import { Directive } from 'vue'
 let style: HTMLStyleElement | null = null
 
 const animationStr = `
-    @keyframes v-flicker {
-      0% {
-        opacity: 0;
-      }
-      50% {
-        opacity: 1;
-      }
-      100% {
-        opacity: 0;
-      }
-    }
-    `
+@keyframes v-flicker {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+`
 
 const vFlicker: Directive = {
   mounted(el: HTMLElement) {

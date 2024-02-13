@@ -1,3 +1,9 @@
+/**
+ * @description: v-waterMarker指令
+ * @LastEditors: ileostar
+ * @LastEditTime: 2024/02/07 11:12:16
+ * @description: 添加水印
+ */
 import type { Directive, DirectiveBinding } from "vue";
 const addWaterMarker: Directive = (str: string, parentNode: any, font: any, textColor: string) => {
     // 水印文字，父元素，字体，文字颜色
@@ -15,11 +21,11 @@ const addWaterMarker: Directive = (str: string, parentNode: any, font: any, text
     cans.fillText(str, can.width / 10, can.height / 2);
     parentNode.style.backgroundImage = "url(" + can.toDataURL("image/png") + ")";
 };
- 
+
 const waterMarker = {
     mounted(el: DirectiveBinding, binding: DirectiveBinding) {
         addWaterMarker(binding.value.text, el, binding.value.font, binding.value.textColor);
     }
 };
- 
+
 export default waterMarker;
