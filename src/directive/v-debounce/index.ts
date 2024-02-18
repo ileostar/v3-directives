@@ -5,7 +5,7 @@
  * @description: 防抖功能
  */
 import { Directive, DirectiveBinding } from 'vue'
-import { isFunction } from '@/utils'
+import { isFunction } from '../../utils'
 
 const elMapToHandlers: WeakMap<Element, () => void> = new WeakMap()
 

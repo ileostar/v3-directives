@@ -2,7 +2,7 @@
  * @description: v-clickOutside指令
  * @LastEditors: ileostar
  * @LastEditTime: 2024/02/07 11:12:16
- * @description: 窗口点击外部事件
+ * @description: 点击元素外部触发时事件
  */
 import { Directive, DirectiveBinding } from 'vue'
 
@@ -21,10 +21,10 @@ const addEventListener = (el: Element, binding: DirectiveBinding) => {
 }
 
 const vClickOut: Directive = {
-  mounted(el: HTMLElement, binding) {
+  mounted(el: HTMLElement, binding: DirectiveBinding) {
     addEventListener(el, binding)
   },
-  updated(el: HTMLElement, binding) {
+  updated(el: HTMLElement, binding: DirectiveBinding) {
     if (elMapToHandlers.has(el)) {
       const handler = elMapToHandlers.get(el)
       handler && window.removeEventListener('click', handler)
@@ -32,7 +32,7 @@ const vClickOut: Directive = {
     }
     addEventListener(el, binding)
   },
-  beforeUnmount(el) {
+  beforeUnmount(el: HTMLElement) {
     if (elMapToHandlers.has(el)) {
       const handler = elMapToHandlers.get(el)
 
@@ -41,4 +41,5 @@ const vClickOut: Directive = {
     }
   }
 }
+
 export default vClickOut

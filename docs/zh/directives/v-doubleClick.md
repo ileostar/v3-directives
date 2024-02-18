@@ -2,12 +2,29 @@
 
 ## 功能介绍
 
-🚧 正在施工中 🚧
+双击触发事件
 
 ## 示例
 
-🚧 正在施工中 🚧
+<script setup lang="ts">
+  const handle = () => {
+    window.alert('触发了事件')
+  }
+</script>
+
+
+<button style="display:flex;justify-content:center;align-items:center;border:1px solid #ccc;padding:10px;border-radius:5px" v-doubleClick="handle">双击我</button>
+
 
 ## 使用
 
-🚧 正在施工中 🚧
+```typescript {7}
+<script setup lang="ts">
+  const handle = () => {
+    window.alert('触发了事件')
+  }
+</script>
+<template>
+  <button v-doubleClick="handle">双击我</button>
+</template>
+```

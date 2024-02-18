@@ -10,7 +10,7 @@ export const sidebar = {
     {
       text: "所有指令",
       items: [
-        { text: "v-backTop", link: "/zh/directives/v-backTop" },
+        { text: "v-backtop", link: "/zh/directives/v-backtop" },
         { text: "v-clickOutside", link: "/zh/directives/v-clickOutside" },
         { text: "v-color", link: "/zh/directives/v-color" },
         { text: "v-copy", link: "/zh/directives/v-copy" },

@@ -10,7 +10,7 @@ export const sidebar = {
     {
       text: "All Directives",
       items: [
-        { text: "v-backTop", link: "/en/directives/v-backTop" },
+        { text: "v-backtop", link: "/en/directives/v-backtop" },
         { text: "v-clickOutside", link: "/en/directives/v-clickOutside" },
         { text: "v-color", link: "/en/directives/v-color" },
         { text: "v-copy", link: "/en/directives/v-copy" },
