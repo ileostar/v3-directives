@@ -5,10 +5,11 @@ export const sidebar = {
       items: [
         { text: "简介", link: "/zh/guide/introduce", activeMatch: '/zh/guide/' },
         { text: "快速起步", link: "/zh/guide/start" },
+        { text: "指令预览", link: "/zh/guide/directives" },
       ],
     },
     {
-      text: "所有指令",
+      text: "指令集",
       items: [
         { text: "v-backtop", link: "/zh/directives/v-backtop" },
         { text: "v-clickOutside", link: "/zh/directives/v-clickOutside" },

@@ -3,7 +3,7 @@ export default function getNavs() {
     { text: "指南", link: "/zh/guide/introduce" },
     {
       text: "所有指令",
-      link: '/zh/directives/v-copy'
+      link: '/zh/guide/directives.html#所有指令'
     },
     {
       text: '参与开源',

@@ -5,10 +5,11 @@ export const sidebar = {
       items: [
         { text: "Introduction", link: "/en/guide/introduce", activeMatch: '/en/guide/' },
         { text: "Start", link: "/en/guide/start" },
+        { text: "Directives Preview", link: "/zh/guide/directives" },
       ],
     },
     {
-      text: "All Directives",
+      text: "Directives",
       items: [
         { text: "v-backtop", link: "/en/directives/v-backtop" },
         { text: "v-clickOutside", link: "/en/directives/v-clickOutside" },

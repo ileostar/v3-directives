@@ -41,7 +41,7 @@
       transform: 'translateX(50px)'
     }"
   >
-    I can drag
+    拖拽我
   </div>
 </template>
 ```

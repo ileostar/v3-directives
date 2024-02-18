@@ -31,7 +31,6 @@
 
 ## 规则
 
-
 |  参数   | 类型  |   默认   | 说明  |
 |  ----  | ----  |  ----  | ----  |
 | eventType  | [事件修饰符](https://cn.vuejs.org/guide/essentials/event-handling.html#event-modifiers) |   click   | 事件类型，可为空 |
@@ -45,3 +44,18 @@
 > delay: 1000
 > 
 > handleEvent: handle
+
+<style scoped>
+  table {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+  }
+  td {
+    width: 25%;
+
+  }
+  th {
+    width: 25%;
+  }
+</style>

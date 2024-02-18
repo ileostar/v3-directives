@@ -49,7 +49,7 @@
   --vp-c-default-3: var(--vp-c-gray-3);
   --vp-c-default-soft: var(--vp-c-gray-soft);
 
-  --vp-c-brand-1: #4dffa8;
+  --vp-c-brand-1: #95bdaa;
   --vp-c-brand-2: #4dffa8;
   --vp-c-brand-3: #49f29f;
   --vp-c-brand-soft: #4dffa8;
@@ -121,6 +121,8 @@
   --c-divider-dark: rgba(84, 84, 88, 0.48); */
   /* --c-brand-light: var(--c-yellow-light); */
 
+  --vp-c-brand-1: #4dffa8;
+
   --vp-c-bg: #111827;
   --vp-button-brand-text: #111827;
   --vp-button-brand-hover-text: #262a30;
@@ -158,10 +160,22 @@
   border-radius: 2em;
 }
 
- ::-webkit-scrollbar-button { 
+.dark ::-webkit-scrollbar-track {
+  /* 滚动条的滑轨背景颜色 */
+  background-color: rgba(17, 24, 39, 0.15);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  /* 滑块颜色 */
+  background-color: #111827;
+  background-image: -webkit-linear-gradient(45deg, hsla(0, 0%, 100%, .4) 25%, transparent 0, transparent 50%,      hsla(0, 0%, 100%, .4) 0, hsla(0, 0%, 100%, .4) 75%, transparent 0, transparent);
+  border-radius: 2em;
+}
+
+ ::-webkit-scrollbar-button {
  /*滑轨两头的监听按钮颜色*/
- background-color: #7496AD; 
-} 
+ background-color: #7496AD;
+}
 
 ::-webkit-scrollbar-corner {
   /* 横向滚动条和纵向滚动条相交处尖角的颜色 这条其实没用，因为我的横向滚动条被隐藏了*/
@@ -172,3 +186,5 @@
   /* 隐藏横向滚动条 */
   overflow-x: hidden;
 }
+
+
