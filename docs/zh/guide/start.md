@@ -13,11 +13,11 @@ npm install @ileostar/v3-directives --save
 ## 注册指令
 
 ```typescript {1,5}
-import VueDirectives from "v3-directives";
+import LeoDirectives from "@ileostar/v3-directives";
 
 const app = createApp(App);
 app.use(router).mount("#app");
-app.use(VueDirectives);
+app.use(LeoDirectives);
 ```
 
 

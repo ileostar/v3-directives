@@ -13,7 +13,7 @@ npm install @ileostar/v3-directives --save
 1. Registration Directive （注册指令）
 
 ```typescript
-import VueDirectives from "v3-directives";
+import VueDirectives from "@ileostar/v3-directives";
 const app = createApp(App);
 app.use(router).mount("#app");
 app.use(VueDirectives);
