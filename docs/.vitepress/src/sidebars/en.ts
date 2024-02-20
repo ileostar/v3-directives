@@ -12,6 +12,7 @@ export const sidebar = {
       text: "Directives",
       items: [
         { text: "v-backtop", link: "/en/directives/v-backtop" },
+        { text: "v-badge", link: "/en/directives/v-badge" },
         { text: "v-clickOutside", link: "/en/directives/v-clickOutside" },
         { text: "v-copy", link: "/en/directives/v-copy" },
         { text: "v-debounce", link: "/en/directives/v-debounce" },
@@ -34,6 +35,7 @@ export const sidebar = {
         { text: "v-permisson", link: "/en/directives/v-permisson" },
         { text: "v-resize", link: "/en/directives/v-resize" },
         { text: "v-scrollLoading", link: "/en/directives/v-scrollLoading" },
+        { text: "v-sensor", link: "/en/directives/v-sensor" },
         { text: "v-slideIn", link: "/en/directives/v-slideIn" },
         { text: "v-throttle", link: "/en/directives/v-throttle" },
         { text: "v-tooltip", link: "/en/directives/v-tooltip" },

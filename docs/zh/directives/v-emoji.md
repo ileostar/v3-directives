@@ -6,8 +6,13 @@
 
 ## 示例
 
-🚧 正在施工中 🚧
+<label>禁止输入emoji：</label><input style="border: 1px solid #ccc;border-radius: 5px;margin: 2px;padding: 0 5px;" type="text" v-emoji />
 
 ## 使用
 
-🚧 正在施工中 🚧
+
+```typescript {2}
+<template>
+  <input type="text" v-emoji />
+</template>
+```

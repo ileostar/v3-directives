@@ -12,6 +12,7 @@ export const sidebar = {
       text: "指令集",
       items: [
         { text: "v-backtop", link: "/zh/directives/v-backtop" },
+        { text: "v-badge", link: "/zh/directives/v-badge" },
         { text: "v-clickOutside", link: "/zh/directives/v-clickOutside" },
         { text: "v-copy", link: "/zh/directives/v-copy" },
         { text: "v-debounce", link: "/zh/directives/v-debounce" },
@@ -34,6 +35,7 @@ export const sidebar = {
         { text: "v-permisson", link: "/zh/directives/v-permisson" },
         { text: "v-resize", link: "/zh/directives/v-resize" },
         { text: "v-scrollLoading", link: "/zh/directives/v-scrollLoading" },
+        { text: "v-sensor", link: "/zh/directives/v-sensor" },
         { text: "v-slideIn", link: "/zh/directives/v-slideIn" },
         { text: "v-throttle", link: "/zh/directives/v-throttle" },
         { text: "v-tooltip", link: "/zh/directives/v-tooltip" },

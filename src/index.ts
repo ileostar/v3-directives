@@ -6,6 +6,7 @@ import debounce from './directive/v-debounce'
 import doubleClick from './directive/v-doubleClick'
 import draggable from './directive/v-draggable'
 import ellipsis from './directive/v-ellipsis'
+import emoji from './directive/v-emoji'
 
 interface DirectiveCollection {
   [key: string]: Directive
@@ -18,7 +19,8 @@ const directives: DirectiveCollection = {
   debounce,
   doubleClick,
   draggable,
-  ellipsis
+  ellipsis,
+  emoji
 }
 
 export default {

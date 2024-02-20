@@ -10,7 +10,7 @@ interface TextElement extends HTMLElement {
   [index: string]: any
 }
 
-let findEle = (parent: { tagName: string; querySelector: (arg0: any) => any }, type: any) => {
+let findEle = (parent: { tagName: string; querySelector: any }, type: string) => {
   return parent.tagName.toLowerCase() === type ? parent : parent.querySelector(type)
 }
 
@@ -20,23 +20,22 @@ const trigger = (el: HTMLElement, type: string) => {
   el.dispatchEvent(e)
 }
 
-const vEmoji: Directive = {
-  mounted: function (el: TextElement, binding: DirectiveBinding) {
-    // 正则规则可根据需求自定义
-    var regRule = /[^u4E00-u9FA5|d|a-zA-Z|rns,.?!，。？！…—&$=()-+/*{}[]]|s/g
-    let $inp = findEle(el, 'input')
-    el.$inp = $inp
-    $inp.handle = function () {
-      let val = $inp.value
-      $inp.value = val.replace(regRule, '')
 
-      trigger($inp, 'input')
-    }
-    $inp.addEventListener('keyup', $inp.handle)
+
+const vEmoji: Directive = {
+  mounted(el){
+    let reg = /[^u4E00-u9FA5|d|a-zA-Z|rns,.?!，。？！…—&$=()-+/*{}[]]|s/g;
+    let $inp = findEle(el, 'input');
+    el.$inp = $inp;
+    $inp.handle = () => {
+      let val = $inp.value;
+      $inp.value=val.replace(reg, '');
+      trigger($inp, 'input');
+    };
   },
-  unmounted: function (el: TextElement) {
-    el.$inp.removeEventListener('keyup', el.$inp.handle)
-  },
+  unmounted(el){
+    el.$inp.removeEventListener('keyup', el.$inp.handle);
+  }
 }
 
 export default vEmoji

@@ -1,8 +1,8 @@
-# v-highlight
+# v-sensor
 
 ## 功能介绍
 
-文本高亮
+添加埋点
 
 ## 示例
 
