@@ -17,6 +17,7 @@ const handler = (el: HTMLElement, binding: DirectiveBinding) => {
   } else {
     el.style.whiteSpace = 'nowrap'
   }
+  el.setAttribute('title', el.textContent as string);
 }
 
 const vTextEllipsis: Directive = {

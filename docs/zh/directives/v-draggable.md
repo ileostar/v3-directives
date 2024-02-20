@@ -17,7 +17,8 @@
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    transform: 'translateX(50px)'
+    transform: 'translateX(50px)',
+    color: 'white'
   }"
 >
   拖拽我

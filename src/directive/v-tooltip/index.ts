@@ -7,8 +7,8 @@
 
 import { App, createApp, h, Ref, ref } from 'vue'
 import TooltipDirective from './components/TooltipDirective.vue'
-import { getDefaultConfig } from '@/utils/config'
-import { placements } from '@/utils/popper'
+import { getDefaultConfig } from '../../utils/config'
+import { placements } from '../../utils/popper'
 
 const TARGET_CLASS = 'v-popper--has-tooltip'
 

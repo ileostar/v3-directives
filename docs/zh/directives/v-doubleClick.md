@@ -13,7 +13,18 @@
 </script>
 
 
-<button style="display:flex;justify-content:center;align-items:center;border:1px solid #ccc;padding:10px;border-radius:5px" v-doubleClick="handle">双击我</button>
+<button
+  v-doubleClick="handle"
+  :style="{
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    border: '1px solid #ccc',
+    padding: '10px',
+    borderRadius: '5px'
+    }">
+  双击我
+</button>
 
 
 ## 使用

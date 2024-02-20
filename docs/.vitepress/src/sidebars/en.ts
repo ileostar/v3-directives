@@ -5,7 +5,7 @@ export const sidebar = {
       items: [
         { text: "Introduction", link: "/en/guide/introduce", activeMatch: '/en/guide/' },
         { text: "Start", link: "/en/guide/start" },
-        { text: "Directives Preview", link: "/zh/guide/directives" },
+        { text: "Directives Preview", link: "/en/guide/directives" },
       ],
     },
     {

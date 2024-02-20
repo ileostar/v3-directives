@@ -1,4 +1,4 @@
-# v-backTop
+# v-backtop
 
 ## Function Introduction
 

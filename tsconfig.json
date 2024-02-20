@@ -9,13 +9,19 @@
     "sourceMap": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "lib": ["esnext", "dom"]
+    "lib": ["esnext", "dom"],
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@dirs/*": ["./src/directive/*"]
+    }
   },
   "include": [
     "src/**/*.ts",
     "src/**/*.d.ts",
     "src/**/*.tsx",
-    "src/**/*.vue"
+    "src/**/*.vue",
+    "src/directive/v-tooltip/test/*.spec.ts"
   ],
   "exclude": ["node_modules","./src/directive/v-tooltip"]
 }

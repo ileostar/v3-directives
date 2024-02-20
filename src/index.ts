@@ -5,6 +5,7 @@ import copy from './directive/v-copy'
 import debounce from './directive/v-debounce'
 import doubleClick from './directive/v-doubleClick'
 import draggable from './directive/v-draggable'
+import ellipsis from './directive/v-ellipsis'
 
 interface DirectiveCollection {
   [key: string]: Directive
@@ -16,7 +17,8 @@ const directives: DirectiveCollection = {
   copy,
   debounce,
   doubleClick,
-  draggable
+  draggable,
+  ellipsis
 }
 
 export default {
