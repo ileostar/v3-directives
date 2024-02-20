@@ -1,8 +1,8 @@
 /**
- * @description: v-ellipsis指令
+ * @description: v-emoji指令
  * @LastEditors: ileostar
  * @LastEditTime: 2024/02/07 11:12:16
- * @description: 省略超出文本
+ * @description: 禁止输入emoji
  */
 import { Directive, DirectiveBinding } from "vue"
 
@@ -20,7 +20,7 @@ const trigger = (el: HTMLElement, type: string) => {
   el.dispatchEvent(e)
 }
 
-const vEllipsis: Directive = {
+const vEmoji: Directive = {
   mounted: function (el: TextElement, binding: DirectiveBinding) {
     // 正则规则可根据需求自定义
     var regRule = /[^u4E00-u9FA5|d|a-zA-Z|rns,.?!，。？！…—&$=()-+/*{}[]]|s/g
@@ -39,5 +39,5 @@ const vEllipsis: Directive = {
   },
 }
 
-export default vEllipsis
+export default vEmoji
 

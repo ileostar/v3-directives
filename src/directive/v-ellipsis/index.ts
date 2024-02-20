@@ -2,7 +2,7 @@
  * @description: v-ellipsis指令
  * @LastEditors: ileostar
  * @LastEditTime: 2024/02/07 11:12:16
- * @description: 省略超出文本
+ * @description: 省略超出文本，将多余的文本用省略号代替，完整文本显示在title属性中
  */
 import { Directive, DirectiveBinding } from 'vue'
 
@@ -20,7 +20,7 @@ const handler = (el: HTMLElement, binding: DirectiveBinding) => {
   el.setAttribute('title', el.textContent as string);
 }
 
-const vTextEllipsis: Directive = {
+const vEllipsis: Directive = {
   mounted(el: HTMLElement, binding) {
     handler(el, binding)
   },
@@ -28,4 +28,4 @@ const vTextEllipsis: Directive = {
     handler(el, binding)
   }
 }
-export default vTextEllipsis
+export default vEllipsis
