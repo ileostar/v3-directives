@@ -6,13 +6,7 @@
 
 ## 示例
 
-<script setup lang="ts">
-const req = () => {
-  alert('发送请求')
-}
-</script>
-
-<input type="text" v-throttle/>
+🚧 正在施工中 🚧
 
 ## 使用
 

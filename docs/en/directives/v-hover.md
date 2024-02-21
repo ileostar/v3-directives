@@ -1,45 +1,14 @@
 # v-hover
 
-## 功能介绍
+## Function Introduction
 
-经过元素触发回调
+🚧 正在施工中 🚧
 
-## 示例
+## Example
 
-<script setup lang="ts">
-  const handler = () => {
-    window.alert('hover')
-  }
-</script>
-<div
-  v-hover="handler"
-  :style="{
-    width: '200px',
-    height: '200px',
-    border: '1px solid #ccc'
-  }"
->
-  Hover
-</div>
+🚧 正在施工中 🚧
 
-## 使用
+## Usage
 
-```typescript {2-4}
-<script setup lang="ts">
-  const handler = () => {
-    window.alert('hover')
-  }
-</script>
-<template>
-  <div
-    v-hover="handler"
-    :style="{
-      width: '200px',
-      height: '200px',
-      border: '1px solid #ccc'
-    }"
-  >
-    Hover
-  </div>
-</template>
-```
+🚧 正在施工中 🚧
+

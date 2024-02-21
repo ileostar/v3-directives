@@ -18,7 +18,7 @@
 |[v-clickOutside]| 点击元素外部触发时事件       |
 
 :::tip
-更多指令待开发🚧，请查看[参与开源](../directives.md)
+更多指令待开发🚧，请查看参与开源
 :::
 
 <style scoped>

@@ -1,29 +1,13 @@
 # v-onOnce
 
-## 功能介绍
+## Function Introduction
 
-只触发一次回调
+🚧 正在施工中 🚧
 
-## 示例
+## Example
 
-<script setup lang="ts">
-  const handler = () => {
-    window.alert('Hello!')
-  }
-</script>
+🚧 正在施工中 🚧
 
-<button v-ononce:click="handler">只触发一次</button>
+## Usage
 
-
-## 使用
-
-```typescript {8}
-<script setup lang="ts">
-  const handler = () => {
-    window.alert('Hello!')
-  }
-</script>
-<template>
-  <button v-ononce:click="handler">只触发一次</button>
-</template>
-```
+🚧 正在施工中 🚧
