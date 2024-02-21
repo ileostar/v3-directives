@@ -6,8 +6,28 @@
 
 ## 示例
 
-🚧 正在施工中 🚧
+<div
+    v-resize
+    :style="{
+        width: '100px',
+        height: '100px',
+        background: 'blue',
+        borderRadius: '5px'
+    }"
+  ></div>
 
 ## 使用
 
-🚧 正在施工中 🚧
+```typescript {3}
+<template>
+  <div
+    v-resize
+    :style="{
+        width: '100px',
+        height: '100px',
+        background: 'blue',
+        borderRadius: '5px'
+    }"
+  ></div>
+</template>
+```

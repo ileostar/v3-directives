@@ -1,3 +1,9 @@
+/**
+ * @description: v-money指令
+ * @LastEditors: ileostar
+ * @LastEditTime: 2024/02/21 18:12:16
+ * @description: 格式化数字为金额
+ */
 import { Directive, DirectiveBinding } from 'vue'
 
 const setInnerHTML = (el: HTMLElement, binding: DirectiveBinding) => {

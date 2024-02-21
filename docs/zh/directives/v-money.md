@@ -6,8 +6,15 @@
 
 ## 示例
 
-🚧 正在施工中 🚧
+<script setup lang="ts"></script>
+
+<span v-money="123456789.123456"></span>
 
 ## 使用
 
-🚧 正在施工中 🚧
+```typescript {3}
+<script setup lang="ts"></script>
+<template>
+  <span v-money="123456789.123456"></span>
+</template>
+```

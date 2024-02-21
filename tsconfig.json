@@ -22,6 +22,6 @@
     "src/**/*.tsx",
     "src/**/*.vue",
     "src/directive/v-tooltip/test/*.spec.ts"
-  ],
+, "docs/.vitepress/src/utils/index.ts"  ],
   "exclude": ["node_modules","./src/directive/v-tooltip"]
 }
