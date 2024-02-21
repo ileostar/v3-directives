@@ -8,6 +8,8 @@ import draggable from './directive/v-draggable'
 import ellipsis from './directive/v-ellipsis'
 import emoji from './directive/v-emoji'
 import empty from './directive/v-empty'
+import flicker from './directive/v-flicker'
+import focus from './directive/v-focus'
 
 interface DirectiveCollection {
   [key: string]: Directive
@@ -22,7 +24,9 @@ const directives: DirectiveCollection = {
   draggable,
   ellipsis,
   emoji,
-  empty
+  empty,
+  flicker,
+  focus
 }
 
 export default {

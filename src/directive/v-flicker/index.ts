@@ -27,4 +27,5 @@ const vFlicker: Directive = {
     el.style.animation = 'v-flicker 1s infinite'
   }
 }
+
 export default vFlicker
