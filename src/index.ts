@@ -11,6 +11,7 @@ import empty from './directive/v-empty'
 import flicker from './directive/v-flicker'
 import focus from './directive/v-focus'
 import highlight from './directive/v-highlight'
+import input from './directive/v-input'
 
 interface DirectiveCollection {
   [key: string]: Directive
@@ -28,7 +29,8 @@ const directives: DirectiveCollection = {
   empty,
   flicker,
   focus,
-  highlight
+  highlight,
+  input
 }
 
 export default {

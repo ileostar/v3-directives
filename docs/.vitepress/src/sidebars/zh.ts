@@ -24,7 +24,6 @@ export const sidebar = {
         { text: "v-filcker", link: "/zh/directives/v-filcker" },
         { text: "v-focus", link: "/zh/directives/v-focus" },
         { text: "v-highlight", link: "/zh/directives/v-highlight" },
-        { text: "v-infiniteScroll", link: "/zh/directives/v-infiniteScroll" },
         { text: "v-input", link: "/zh/directives/v-input" },
         { text: "v-lazyImg", link: "/zh/directives/v-lazyImg" },
         { text: "v-listenScroll", link: "/zh/directives/v-listenScroll" },
