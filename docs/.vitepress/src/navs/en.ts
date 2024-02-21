@@ -3,7 +3,7 @@ export default function getNavs() {
     { text: "Guide", link: "/en/guide/introduce" },
     {
       text: "All Directives",
-      link: '/en/guide/directives.html#所有指令'
+      link: '/en/guide/directives.html'
     },
     {
       text: 'Open Source',

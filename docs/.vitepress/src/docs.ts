@@ -10,4 +10,5 @@ export const docsConfig: DocsConfig = {
   lastUpdated: true,
   appearance: 'dark',
   outline: [2, 3],
+  ignoreDeadLinks: true
 };

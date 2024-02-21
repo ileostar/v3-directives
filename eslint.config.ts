@@ -10,6 +10,7 @@ export default antfu(
     vue: true,
     markdown: true,
     formatters: true,
+    ignores: ["node_modules"]
   },
   {
     files: ['src/**/*.ts'],
