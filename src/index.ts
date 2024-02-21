@@ -10,6 +10,7 @@ import emoji from './directive/v-emoji'
 import empty from './directive/v-empty'
 import flicker from './directive/v-flicker'
 import focus from './directive/v-focus'
+import highlight from './directive/v-highlight'
 
 interface DirectiveCollection {
   [key: string]: Directive
@@ -26,7 +27,8 @@ const directives: DirectiveCollection = {
   emoji,
   empty,
   flicker,
-  focus
+  focus,
+  highlight
 }
 
 export default {

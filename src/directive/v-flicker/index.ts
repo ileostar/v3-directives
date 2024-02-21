@@ -1,3 +1,9 @@
+/**
+ * @description: v-flicker指令
+ * @LastEditors: ileostar
+ * @LastEditTime: 2024/02/07 11:12:16
+ * @description: 元素闪烁
+ */
 import { Directive } from 'vue'
 
 let style: HTMLStyleElement | null = null

@@ -6,8 +6,18 @@
 
 ## 示例
 
-🚧 正在施工中 🚧
+<div style="display: flex;gap: 10px">
+<span v-highlight>文本高亮</span>
+<span v-highlight:red>文本高亮</span>
+<span v-highlight:#3271ae>文本高亮</span>
+</div>
 
 ## 使用
 
-🚧 正在施工中 🚧
+```typescript {2-4}
+<tempalte>
+  <span v-highlight>文本高亮</span>
+  <span v-highlight:red>文本高亮</span>
+  <span v-highlight:#3271ae>文本高亮</span>
+</template>
+```

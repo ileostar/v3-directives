@@ -2,7 +2,7 @@
  * @description: v-ellipsis指令
  * @LastEditors: ileostar
  * @LastEditTime: 2024/02/07 11:12:16
- * @description: 省略超出文本，将多余的文本用省略号代替，完整文本显示在title属性中
+ * @description: 省略超出文本
  */
 import { Directive, DirectiveBinding } from 'vue'
 
