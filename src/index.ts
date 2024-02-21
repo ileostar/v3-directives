@@ -7,6 +7,7 @@ import doubleClick from './directive/v-doubleClick'
 import draggable from './directive/v-draggable'
 import ellipsis from './directive/v-ellipsis'
 import emoji from './directive/v-emoji'
+import empty from './directive/v-empty'
 
 interface DirectiveCollection {
   [key: string]: Directive
@@ -20,7 +21,8 @@ const directives: DirectiveCollection = {
   doubleClick,
   draggable,
   ellipsis,
-  emoji
+  emoji,
+  empty
 }
 
 export default {

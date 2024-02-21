@@ -6,37 +6,30 @@
  */
 import { Directive, DirectiveBinding } from "vue"
 
-interface TextElement extends HTMLElement {
-  [index: string]: any
-}
-
-let findEle = (parent: { tagName: string; querySelector: any }, type: string) => {
-  return parent.tagName.toLowerCase() === type ? parent : parent.querySelector(type)
-}
-
-const trigger = (el: HTMLElement, type: string) => {
-  const e = document.createEvent('HTMLEvents')
-  e.initEvent(type, true, true)
-  el.dispatchEvent(e)
-}
-
-
-
 const vEmoji: Directive = {
-  mounted(el){
-    let reg = /[^u4E00-u9FA5|d|a-zA-Z|rns,.?!，。？！…—&$=()-+/*{}[]]|s/g;
-    let $inp = findEle(el, 'input');
-    el.$inp = $inp;
-    $inp.handle = () => {
-      let val = $inp.value;
-      $inp.value=val.replace(reg, '');
-      trigger($inp, 'input');
-    };
+  mounted: function (el, binding, vnode) {
+    const handleInput = (event: Event) => {
+      const inputElement = event.target as HTMLInputElement
+      const value = inputElement.value
+      const newValue = value.replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDE4F\uDE80-\uDEFF]|[\u2600-\u27FF]/g, '')
+      if (newValue !== value) {
+        inputElement.value = newValue
+        inputElement.dispatchEvent(new Event('input', { bubbles: true }))
+      }
+    }
+
+    el.addEventListener('input', handleInput)
+
+    el.$destroy = () => {
+      el.removeEventListener('input', handleInput)
+      delete el.$destroy
+    }
   },
-  unmounted(el){
-    el.$inp.removeEventListener('keyup', el.$inp.handle);
-  }
+  unmounted: function (el) {
+    if (el.$destroy) {
+      el.$destroy()
+    }
+  },
 }
 
 export default vEmoji
-
