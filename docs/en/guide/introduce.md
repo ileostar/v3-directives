@@ -29,7 +29,7 @@ const value = ref('Value to be copied')
   Change the value to be copied
 </button>
 
-```typescripts{9}
+```typescript {9}
 <script setup>
 import { ref } from 'vue'
 

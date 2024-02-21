@@ -31,7 +31,7 @@ const value = ref('Value to be copied')
 
 ## Usage
 
-```typescripts{9}
+```typescript {9}
 <script setup>
 import { ref } from 'vue'
 
