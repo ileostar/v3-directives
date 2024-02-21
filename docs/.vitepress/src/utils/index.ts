@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 export function getFirstLevelFiles(directoryPath:string) {
   const files = fs.readdirSync(directoryPath);
-  const fileNames = [];
+  const fileNames: string[] = [];
 
   for (const file of files) {
     const filePath = path.join(directoryPath, file);

@@ -1,8 +1,8 @@
-# v-listenScroll
+# v-lazyscroll
 
 ## 功能介绍
 
-滚动监听
+滚动懒加载
 
 ## 示例
 

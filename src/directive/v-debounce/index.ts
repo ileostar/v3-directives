@@ -22,18 +22,11 @@ const addEventListener = (el: Element, binding: DirectiveBinding): void => {
   let timer: undefined | number = undefined
 
   const handler = (): void => {
-    if (timer === undefined) {
-      timer = window.setTimeout(() => {
-        value()
-        timer = undefined
-      }, delay)
-    } else {
-      window.clearTimeout(timer)
-      timer = window.setTimeout(() => {
-        value()
-        timer = undefined
-      }, delay)
-    }
+    if (timer) return
+    timer = window.setTimeout(() => {
+      value()
+      timer = undefined
+    }, delay)
   }
 
   elMapToHandlers.set(el, handler)

@@ -1,4 +1,4 @@
-import { getThemeClasses } from '../@/utils/config'
+import { getThemeClasses } from '../../../utils/config'
 
 // @vue/component
 export default (prop = 'theme') => ({

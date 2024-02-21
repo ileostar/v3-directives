@@ -23,5 +23,5 @@
     "src/**/*.vue",
     "src/directive/v-tooltip/test/*.spec.ts"
   ],
-  "exclude": ["node_modules","./src/directive/v-tooltip"]
+  "exclude": ["node_modules","./src/directive/v-tooltip/*"]
 }

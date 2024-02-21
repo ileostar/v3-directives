@@ -14,18 +14,17 @@ import highlight from './directive/v-highlight'
 import hover from './directive/v-hover'
 import input from './directive/v-input'
 import lazyImg from './directive/v-lazyImg'
+// import lazyscroll from './directive/v-lazyscroll'
 import loading from './directive/v-loading'
 import longpress from './directive/v-longpress'
 import money from './directive/v-money'
 import onOnce from './directive/v-onOnce'
 // import permisson from './directive/v-permisson'
 import resize from './directive/v-resize'
-// import scroll from './directive/v-scroll'
-// import scrollLoading from './directive/v-scrollLoading'
 // import sensor from './directive/v-sensor'
-// import slideIn from './directive/v-slideIn'
-// import throttle from './directive/v-throttle'
-// import tooltip from './directive/v-tooltip'
+import slideIn from './directive/v-slideIn'
+import throttle from './directive/v-throttle'
+import tooltip from './directive/v-tooltip'
 // import waterMarker from './directive/v-waterMarker'
 
 interface DirectiveCollection {
@@ -52,7 +51,10 @@ const directives: DirectiveCollection = {
   longpress,
   money,
   onOnce,
-  resize
+  resize,
+  slideIn,
+  throttle,
+  tooltip
 }
 
 export default {

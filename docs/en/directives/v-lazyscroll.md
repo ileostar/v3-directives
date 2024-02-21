@@ -1,8 +1,8 @@
-# v-badge
+# v-lazyscroll
 
 ## Function Introduction
 
-徽标
+🚧 正在施工中 🚧
 
 ## Example
 
@@ -11,4 +11,3 @@
 ## Usage
 
 🚧 正在施工中 🚧
-
