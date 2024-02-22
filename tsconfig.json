@@ -1,20 +1,21 @@
 {
   "compilerOptions": {
     "target": "esnext",
+    "jsx": "preserve",
+    "lib": ["esnext", "dom"],
     "useDefineForClassFields": true,
+    "baseUrl": "./",
     "module": "esnext",
     "moduleResolution": "node",
-    "strict": true,
-    "jsx": "preserve",
-    "sourceMap": true,
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
-    "lib": ["esnext", "dom"],
-    "baseUrl": "./",
     "paths": {
       "@/*": ["./src/*"],
-      "@dirs/*": ["./src/directive/*"]
-    }
+      "@dirs/*": ["./src/directive/*"],
+      "third-lib": ["node_modules/third-lib"],
+    },
+    "resolveJsonModule": true,
+    "strict": true,
+    "sourceMap": true,
+    "esModuleInterop": true
   },
   "include": [
     "src/**/*.ts",
@@ -22,6 +23,7 @@
     "src/**/*.tsx",
     "src/**/*.vue",
     "src/directive/v-tooltip/test/*.spec.ts",
-    "src/directive/v-ripple/index.ts"  ],
-  "exclude": ["node_modules","./src/directive/v-tooltip/*"]
+    "src/directive/v-ripple/index.ts",
+  ],
+  "exclude": ["node_modules", "./src/directive/v-tooltip/*"]
 }

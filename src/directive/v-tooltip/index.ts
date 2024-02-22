@@ -1,8 +1,8 @@
 /**
- * @description: v-ellipsis指令
+ * @description: v-tooltip指令
  * @LastEditors: ileostar
  * @LastEditTime: 2024/02/07 11:12:16
- * @description: 省略超出文本
+ * @description: 为元素添加工具提示
  */
 
 import type { App, Ref } from 'vue'
