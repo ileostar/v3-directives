@@ -1,8 +1,8 @@
-# v-sensor
+# v-permission
 
 ## Function Introduction
 
-添加埋点
+🚧 正在施工中 🚧
 
 ## Example
 
@@ -11,4 +11,3 @@
 ## Usage
 
 🚧 正在施工中 🚧
-

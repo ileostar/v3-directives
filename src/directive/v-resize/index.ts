@@ -1,3 +1,10 @@
+/**
+ * @description: v-resize指令
+ * @LastEditors: ileostar
+ * @LastEditTime: 2024/02/07 11:12:16
+ * @description: 响应缩放
+ */
+
 import { Directive } from 'vue'
 function createYElement(type: 'top' | 'bottom'): HTMLDivElement {
   const Element = document.createElement('div')

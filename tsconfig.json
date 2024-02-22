@@ -21,7 +21,7 @@
     "src/**/*.d.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
-    "src/directive/v-tooltip/test/*.spec.ts"
-  ],
+    "src/directive/v-tooltip/test/*.spec.ts",
+    "src/directive/v-ripple/index.ts"  ],
   "exclude": ["node_modules","./src/directive/v-tooltip/*"]
 }

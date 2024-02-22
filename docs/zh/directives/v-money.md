@@ -6,14 +6,11 @@
 
 ## 示例
 
-<script setup lang="ts"></script>
-
 <span v-money="123456789.123456"></span>
 
 ## 使用
 
-```typescript {3}
-<script setup lang="ts"></script>
+```typescript {2}
 <template>
   <span v-money="123456789.123456"></span>
 </template>
