@@ -21,7 +21,6 @@ Only one callback is triggered
     borderRadius: '5px'
     }" v-onOnce:click="handler">Trigger only once</button>
 
-
 ## Usage
 
 ```typescript {7}

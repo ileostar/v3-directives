@@ -11,8 +11,6 @@
   点我返回顶部
 </button>
 
-
-
 ## 使用
 
 ```typescript {4}
@@ -25,4 +23,3 @@
   </div>
 </template>
 ```
-

@@ -23,4 +23,3 @@ Add a return to top function for an element
   </div>
 </template>
 ```
-

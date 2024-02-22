@@ -12,7 +12,6 @@
   }
 </script>
 
-
 <button
   v-doubleClick="handle"
   :style="{
@@ -23,9 +22,8 @@
     padding: '10px',
     borderRadius: '5px'
     }">
-  双击我
+双击我
 </button>
-
 
 ## 使用
 

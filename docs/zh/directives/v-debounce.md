@@ -12,7 +12,6 @@
   }
 </script>
 
-
 <button
   v-debounce="handle"
   :style="{
@@ -23,9 +22,8 @@
     padding: '10px',
     borderRadius: '5px'
     }">
-    快速点击我
-    </button>
-
+快速点击我
+</button>
 
 ## 使用
 
@@ -42,18 +40,18 @@
 
 ## 规则
 
-|  参数   | 类型  |   默认   | 说明  |
-|  ----  | ----  |  ----  | ----  |
-| eventType  | [事件修饰符](https://cn.vuejs.org/guide/essentials/event-handling.html#event-modifiers) |   click   | 事件类型，可为空 |
-| delay  | 时间，毫秒为单位 |   300   | 延迟时间，可为空  |
-| handleEvent  | - |   -   | 处理事件，必填  |
+| 参数        | 类型                                                                                    | 默认  | 说明             |
+| ----------- | --------------------------------------------------------------------------------------- | ----- | ---------------- |
+| eventType   | [事件修饰符](https://cn.vuejs.org/guide/essentials/event-handling.html#event-modifiers) | click | 事件类型，可为空 |
+| delay       | 时间，毫秒为单位                                                                        | 300   | 延迟时间，可为空 |
+| handleEvent | -                                                                                       | -     | 处理事件，必填   |
 
 > **举例: v-debounce:click-1000="handle"**
-> 
+>
 > eventType: click
-> 
+>
 > delay: 1000
-> 
+>
 > handleEvent: handle
 
 <style scoped>

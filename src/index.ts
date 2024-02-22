@@ -23,7 +23,6 @@ import resize from './directive/v-resize'
 import ripple from './directive/v-ripple'
 import slideIn from './directive/v-slideIn'
 import throttle from './directive/v-throttle'
-import tooltip from './directive/v-tooltip'
 import waterMarker from './directive/v-waterMarker'
 
 interface DirectiveCollection {
@@ -55,7 +54,6 @@ const directives: DirectiveCollection = {
   ripple,
   slideIn,
   throttle,
-  tooltip,
   waterMarker,
 }
 

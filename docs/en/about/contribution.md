@@ -1,9 +1,3 @@
-
-
-
-
-
-
 # v3-directives Open Source Guide
 
 ## How to develop a new instruction
@@ -11,6 +5,7 @@
 If you do not understand the custom instructions, you can first read the official documentation [👉custom instructions development](https://vuejs.org/guide/reusability/custom-directives.html)
 
 ## Project directory structure
+
 ```txt
 ├── .github
 ├── .vscode

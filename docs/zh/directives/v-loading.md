@@ -30,15 +30,15 @@ const style = {
   :style="style"
 ></div>
 
-<button 
-  :style="{
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    border: '1px solid #ccc',
-    padding: '0 5px',
-    borderRadius: '5px'
-    }" @click="changeLoading">状态切换</button>
+<button
+:style="{
+display: 'flex',
+justifyContent: 'center',
+alignItems: 'center',
+border: '1px solid #ccc',
+padding: '0 5px',
+borderRadius: '5px'
+}" @click="changeLoading">状态切换</button>
 
 ## 使用
 

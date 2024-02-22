@@ -8,6 +8,6 @@ import VueDirectives from '../../../src'
 export default {
   extends: DefaultTheme,
   enhanceApp({ app }) {
-    app.use(VueDirectives);
-  }
+    app.use(VueDirectives)
+  },
 } satisfies Theme

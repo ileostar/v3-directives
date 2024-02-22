@@ -12,7 +12,6 @@ Trigger an event on double-click
   }
 </script>
 
-
 <button
   v-doubleClick="handle"
   :style="{
@@ -23,9 +22,8 @@ Trigger an event on double-click
     padding: '10px',
     borderRadius: '5px'
     }">
-  Double click me
+Double click me
 </button>
-
 
 ## Usage
 

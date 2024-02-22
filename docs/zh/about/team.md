@@ -34,7 +34,7 @@ const members = [
   />
 
   <!-- 其他成员 -->
-  <!-- 
+  <!--
   <VPTeamPageSection>
     <template #title>Partners</template>
     <template #lead>Lorem ipsum...</template>

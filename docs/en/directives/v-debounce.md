@@ -12,7 +12,6 @@ Anti-shaking function
   }
 </script>
 
-
 <button
   v-debounce="handle"
   :style="{
@@ -23,9 +22,8 @@ Anti-shaking function
     padding: '10px',
     borderRadius: '5px'
     }">
-    Quick click me
-    </button>
-
+Quick click me
+</button>
 
 ## Usage
 
@@ -42,18 +40,18 @@ Anti-shaking function
 
 ## Rule
 
-|  argument   | type  |   acquiesce   | Instructions  |
-|  ----  | ----  |  ----  | ----  |
-| eventType  | [Event modifier](https://vuejs.org/guide/essentials/event-handling.html) |   click   | Event type, which can be null |
-| delay  | Time, in milliseconds |   300   | Delay time, which can be empty  |
-| handleEvent  | - |   -   | Processing event, required  |
+| argument    | type                                                                     | acquiesce | Instructions                   |
+| ----------- | ------------------------------------------------------------------------ | --------- | ------------------------------ |
+| eventType   | [Event modifier](https://vuejs.org/guide/essentials/event-handling.html) | click     | Event type, which can be null  |
+| delay       | Time, in milliseconds                                                    | 300       | Delay time, which can be empty |
+| handleEvent | -                                                                        | -         | Processing event, required     |
 
 > **Example: v-debounce:click-1000="handle"**
-> 
+>
 > eventType: click
-> 
+>
 > delay: 1000
-> 
+>
 > handleEvent: handle
 
 <style scoped>

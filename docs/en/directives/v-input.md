@@ -61,11 +61,11 @@ const inputValue3 = ref('')
 
 v-input `type` rule:
 
-|  parameters | default （restrict）  | description  |
-|  ----    | ----  | ----  |
-| number | - | is limited to the number |
-| decimal | 10 | The value is limited to decimals and restrict the number that indicates the next few decimals |
-| customize | - | Customize the regular expression, restrict enter the regular expression |
+| parameters | default （restrict） | description                                                                                   |
+| ---------- | -------------------- | --------------------------------------------------------------------------------------------- |
+| number     | -                    | is limited to the number                                                                      |
+| decimal    | 10                   | The value is limited to decimals and restrict the number that indicates the next few decimals |
+| customize  | -                    | Customize the regular expression, restrict enter the regular expression                       |
 
 <style scoped>
   table {
@@ -80,4 +80,3 @@ v-input `type` rule:
     width: 25%;
   }
 </style>
-

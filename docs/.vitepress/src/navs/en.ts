@@ -1,9 +1,9 @@
 export default function getNavs() {
   return [
-    { text: "Guide", link: "/en/guide/introduce" },
+    { text: 'Guide', link: '/en/guide/introduce' },
     {
-      text: "All Directives",
-      link: '/en/guide/directives.html'
+      text: 'All Directives',
+      link: '/en/guide/directives.html',
     },
     {
       text: 'Open Source',
@@ -12,13 +12,13 @@ export default function getNavs() {
           text: 'Contribute',
           items: [
             { text: 'Developer Guide', link: '/en/about/contribution' },
-          ]
+          ],
         },
         {
           text: 'Concerning',
-          items: [{ text: 'Development Team', link: '/en/about/team' }]
-        }
-      ]
-    }
+          items: [{ text: 'Development Team', link: '/en/about/team' }],
+        },
+      ],
+    },
   ]
 };

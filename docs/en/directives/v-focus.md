@@ -6,7 +6,7 @@ Input box autofocus
 
 ## Example
 
-<input 
+<input
   :style="{
     display: 'flex',
     justifyContent: 'center',

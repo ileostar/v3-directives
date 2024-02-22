@@ -18,14 +18,15 @@ const emptyValue = computed(() => ({
 </script>
 
 <button
-  :style="{
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    border: '1px solid #ccc',
-    padding: '10px',
-    borderRadius: '5px'
-    }" @click="isEmpty = !isEmpty">Switching state</button>
+:style="{
+display: 'flex',
+justifyContent: 'center',
+alignItems: 'center',
+border: '1px solid #ccc',
+padding: '10px',
+borderRadius: '5px'
+}" @click="isEmpty = !isEmpty">Switching state</button>
+
 <div :style="{
   display: 'flex',
   alignItems: 'center',
@@ -68,7 +69,7 @@ const emptyValue = computed(() => ({
 
 v-empty receives an object (accepting reactive data) with the following properties:
 | | Type | The default | Description |
-|  ----  | ----  |  ----  | ----  |
+| ---- | ---- | ---- | ---- |
 | content | string | '暂无数据' | can be empty |
 | img | url | - | Image address. The value can be empty |
 | visible | boolean | false | Whether to display. The value can be empty |

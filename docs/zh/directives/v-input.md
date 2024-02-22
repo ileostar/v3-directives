@@ -36,7 +36,6 @@ const inputValue3 = ref('')
     }" type="text" v-input:customize="/[^\d]/" v-model="inputValue3" /></div>
 </div>
 
-
 ## 使用
 
 ```typescript {4,8,12}
@@ -62,11 +61,11 @@ const inputValue3 = ref('')
 
 v-input的`type`规则:
 
-|  参数    | 默认（restrict）   | 说明  |
-|  ----    | ----  | ----  |
-| number   | -  | 限制为数字 |
-| decimal    | 10  | 限制为小数，restrict填数字，表示限制后几位小数  |
-| customize   | -   | 自定义正则限制, restrict填写正则表达式  |
+| 参数      | 默认（restrict） | 说明                                           |
+| --------- | ---------------- | ---------------------------------------------- |
+| number    | -                | 限制为数字                                     |
+| decimal   | 10               | 限制为小数，restrict填数字，表示限制后几位小数 |
+| customize | -                | 自定义正则限制, restrict填写正则表达式         |
 
 <style scoped>
   table {
@@ -81,4 +80,3 @@ v-input的`type`规则:
     width: 25%;
   }
 </style>
-

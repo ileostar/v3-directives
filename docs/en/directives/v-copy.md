@@ -47,5 +47,3 @@ const value = ref('Value to be copied')
   </button>
 </template>
 ```
-
-

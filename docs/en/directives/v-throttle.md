@@ -51,17 +51,18 @@ const onSubmit = () => {
 
 ## Rule
 
-|Parameter | Type | Default | Description|
-|----|----|----|----|
-|EventType | [Event modifier](https://vuejs.org/guide/essentials/event-handling.html) | click | Event type, can be empty|
-|Delay | Time in milliseconds | 300 | Event type, can be empty|
-|HandleEvent | - | - | Processing event, required|
+| Parameter   | Type                                                                     | Default | Description                |
+| ----------- | ------------------------------------------------------------------------ | ------- | -------------------------- |
+| EventType   | [Event modifier](https://vuejs.org/guide/essentials/event-handling.html) | click   | Event type, can be empty   |
+| Delay       | Time in milliseconds                                                     | 300     | Event type, can be empty   |
+| HandleEvent | -                                                                        | -       | Processing event, required |
+
 > **Example: v-throttle:click-1000="handle"**
-> 
+>
 > eventType: click
-> 
+>
 > delay: 1000
-> 
+>
 > handleEvent: handle
 
 <style scoped>
@@ -78,7 +79,6 @@ const onSubmit = () => {
     width: 25%;
   }
 </style>
-
 
 :::tip
 If there is responsive data, the [v-once](https://vuejs.org/api/built-in-directives.html) instruction needs to be used, otherwise it will trigger multiple responsive data updates, causing DOM to re render and rendering throttling ineffective

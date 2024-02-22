@@ -5,10 +5,11 @@
  * @description: 给元素添加波纹动效
  */
 
+/* eslint-disable ts/ban-ts-comment */
 // @ts-nocheck
 import type { Directive } from 'vue'
 
-var Ripple: Directive = {
+const Ripple: Directive = {
   mounted(el, binding) {
     // Default values.
     const props = {
@@ -142,7 +143,7 @@ var Ripple: Directive = {
 
 function setProps(modifiers, props) {
   modifiers.forEach((item) => {
-    if (isNaN(Number(item)))
+    if (Number.isNaN(Number(item)))
       props.event = item
     else
       props.transition = item

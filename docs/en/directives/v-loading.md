@@ -30,15 +30,15 @@ const style = {
   :style="style"
 ></div>
 
-<button 
-  :style="{
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    border: '1px solid #ccc',
-    padding: '0 5px',
-    borderRadius: '5px'
-    }" @click="changeLoading">State switch</button>
+<button
+:style="{
+display: 'flex',
+justifyContent: 'center',
+alignItems: 'center',
+border: '1px solid #ccc',
+padding: '0 5px',
+borderRadius: '5px'
+}" @click="changeLoading">State switch</button>
 
 ## Usage
 

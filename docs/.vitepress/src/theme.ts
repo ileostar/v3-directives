@@ -1,4 +1,4 @@
-import type { DefaultTheme } from "vitepress";
+import type { DefaultTheme } from 'vitepress'
 
 export const themeConfig: DefaultTheme.Config = {
   // https://vitepress.dev/reference/default-theme-config
@@ -11,7 +11,7 @@ export const themeConfig: DefaultTheme.Config = {
   // 搜索配置（二选一）
   search: {
     // 本地离线搜索
-    provider: "local",
+    provider: 'local',
 
     // 多语言搜索配置
     options: {
@@ -20,15 +20,15 @@ export const themeConfig: DefaultTheme.Config = {
         root: {
           translations: {
             button: {
-              buttonText: "搜索",
-              buttonAriaLabel: "搜索文档",
+              buttonText: '搜索',
+              buttonAriaLabel: '搜索文档',
             },
             modal: {
-              noResultsText: "无法找到相关结果",
-              resetButtonTitle: "清除查询结果",
+              noResultsText: '无法找到相关结果',
+              resetButtonTitle: '清除查询结果',
               footer: {
-                selectText: "选择",
-                navigateText: "切换",
+                selectText: '选择',
+                navigateText: '切换',
               },
             },
           },
@@ -36,31 +36,31 @@ export const themeConfig: DefaultTheme.Config = {
         en: {
           translations: {
             button: {
-              buttonText: "Search",
-              buttonAriaLabel: "Search for Documents",
+              buttonText: 'Search',
+              buttonAriaLabel: 'Search for Documents',
             },
             modal: {
-              noResultsText: "Unable to find relevant results",
-              resetButtonTitle: "Clear Query Results",
+              noResultsText: 'Unable to find relevant results',
+              resetButtonTitle: 'Clear Query Results',
               footer: {
-                selectText: "select",
-                navigateText: "switch",
+                selectText: 'select',
+                navigateText: 'switch',
               },
             },
           },
         },
-      }
-    }
+      },
+    },
   },
 
   socialLinks: [
     { icon: 'x', link: 'https://twitter.com/030LeoStar' },
-    { icon: 'github', link: 'https://github.com/ileostar/v3-directives' }
+    { icon: 'github', link: 'https://github.com/ileostar/v3-directives' },
   ],
 
   footer: {
     message: 'Released under the MIT License.',
     copyright:
-      'Copyright © 2024-present <a href="https://github.com/ileostar">ileostar</a>'
+      'Copyright © 2024-present <a href="https://github.com/ileostar">ileostar</a>',
   },
-};
+}

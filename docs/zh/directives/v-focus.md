@@ -6,7 +6,7 @@
 
 ## 示例
 
-<input 
+<input
   :style="{
     display: 'flex',
     justifyContent: 'center',

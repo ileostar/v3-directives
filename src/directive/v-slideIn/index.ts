@@ -14,7 +14,8 @@ function isBelowViewport(el: HTMLElement) {
 function handleScroll() {
   const elements = document.querySelectorAll('[v-slide-in]')
   elements.forEach((el: any) => {
-    if (isBelowViewport(el)) return
+    if (isBelowViewport(el))
+      return
 
     const animation = map.get(el)
     if (animation) {

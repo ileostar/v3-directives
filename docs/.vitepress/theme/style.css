@@ -8,7 +8,7 @@
  *
  * Each colors have exact same color scale system with 3 levels of solid
  * colors with different brightness, and 1 soft color.
- * 
+ *
  * - `XXX-1`: The most solid color used mainly for colored text. It must
  *   satisfy the contrast ratio against when used on top of `XXX-soft`.
  *
@@ -69,12 +69,11 @@
   --vp-c-danger-3: var(--vp-c-red-3);
   --vp-c-danger-soft: var(--vp-c-red-soft);
 
-  --vp-button-brand-border: rgba(60, 60, 67, .29);
-  --vp-button-alt-border: rgba(60, 60, 67, .29);
-  --vp-button-brand-hover-border: rgba(60, 60, 67, .29);
-  --vp-button-alt-hover-border: rgba(60, 60, 67, .29);
+  --vp-button-brand-border: rgba(60, 60, 67, 0.29);
+  --vp-button-alt-border: rgba(60, 60, 67, 0.29);
+  --vp-button-brand-hover-border: rgba(60, 60, 67, 0.29);
+  --vp-button-alt-hover-border: rgba(60, 60, 67, 0.29);
 }
-
 
 /**
  * Component: Home
@@ -94,7 +93,6 @@
     #7496ad 20%
   );
   --vp-home-hero-image-filter: blur(65px);
-
 }
 
 @media (min-width: 640px) {
@@ -108,8 +106,6 @@
     --vp-home-hero-image-filter: blur(68px);
   }
 }
-
-
 
 /**
  * Component: Dark Mode
@@ -133,10 +129,10 @@
   --vp-custom-block-tip-bg: #113236;
   --vp-custom-block-tip-code-bg: var(--vp-c-brand-soft);
 
-  --vp-button-brand-border: rgba(82, 82, 89, .68);
-  --vp-button-alt-border: rgba(82, 82, 89, .68);
-  --vp-button-brand-hover-border: rgba(82, 82, 89, .68);
-  --vp-button-alt-hover-border: rgba(82, 82, 89, .68);
+  --vp-button-brand-border: rgba(82, 82, 89, 0.68);
+  --vp-button-alt-border: rgba(82, 82, 89, 0.68);
+  --vp-button-brand-hover-border: rgba(82, 82, 89, 0.68);
+  --vp-button-alt-hover-border: rgba(82, 82, 89, 0.68);
 }
 
 /**
@@ -155,8 +151,17 @@
 
 ::-webkit-scrollbar-thumb {
   /* 滑块颜色 */
-  background-color: #45E196;
-  background-image: -webkit-linear-gradient(45deg, hsla(0, 0%, 100%, .4) 25%, transparent 0, transparent 50%,      hsla(0, 0%, 100%, .4) 0, hsla(0, 0%, 100%, .4) 75%, transparent 0, transparent);
+  background-color: #45e196;
+  background-image: -webkit-linear-gradient(
+    45deg,
+    hsla(0, 0%, 100%, 0.4) 25%,
+    transparent 0,
+    transparent 50%,
+    hsla(0, 0%, 100%, 0.4) 0,
+    hsla(0, 0%, 100%, 0.4) 75%,
+    transparent 0,
+    transparent
+  );
   border-radius: 2em;
 }
 
@@ -168,13 +173,22 @@
 .dark ::-webkit-scrollbar-thumb {
   /* 滑块颜色 */
   background-color: #111827;
-  background-image: -webkit-linear-gradient(45deg, hsla(0, 0%, 100%, .4) 25%, transparent 0, transparent 50%,      hsla(0, 0%, 100%, .4) 0, hsla(0, 0%, 100%, .4) 75%, transparent 0, transparent);
+  background-image: -webkit-linear-gradient(
+    45deg,
+    hsla(0, 0%, 100%, 0.4) 25%,
+    transparent 0,
+    transparent 50%,
+    hsla(0, 0%, 100%, 0.4) 0,
+    hsla(0, 0%, 100%, 0.4) 75%,
+    transparent 0,
+    transparent
+  );
   border-radius: 2em;
 }
 
- ::-webkit-scrollbar-button {
- /*滑轨两头的监听按钮颜色*/
- background-color: #7496AD;
+::-webkit-scrollbar-button {
+  /*滑轨两头的监听按钮颜色*/
+  background-color: #7496ad;
 }
 
 ::-webkit-scrollbar-corner {
@@ -186,5 +200,3 @@
   /* 隐藏横向滚动条 */
   overflow-x: hidden;
 }
-
-

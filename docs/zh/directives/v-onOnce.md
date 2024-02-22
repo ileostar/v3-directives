@@ -21,7 +21,6 @@
     borderRadius: '5px'
     }" v-onOnce:click="handler">只触发一次</button>
 
-
 ## 使用
 
 ```typescript {7}
