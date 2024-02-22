@@ -1,7 +1,7 @@
 {
   "name": "@ileostar/v3-directives",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "packageManager": "pnpm@8.15.3",
   "description": "Custom Vue3 directives",
   "author": "ileostar <hi@leostar.top> (https://github.com/ileostar)",
@@ -18,16 +18,14 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/v3-directives.esm.js",
-      "require": "./dist/v3-directives.cjs"
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
     }
   },
-  "main": "dist/v3-directives.cjs",
-  "module": "dist/v3-directives.esm.js",
+  "main": "dist/index.cjs",
   "types": "dist/index.d.ts",
   "files": [
     "*.d.ts",
-    "*.mjs",
     "dist"
   ],
   "scripts": {
