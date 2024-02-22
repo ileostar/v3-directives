@@ -10,9 +10,13 @@
     "paths": {
       "@/*": ["./src/*"],
       "@dirs/*": ["./src/directive/*"],
-      "third-lib": ["node_modules/third-lib"],
+      "third-lib": ["node_modules/third-lib"]
     },
     "resolveJsonModule": true,
+    "types": [
+      "vite/client",
+      "vite-plugin-dts"
+    ],
     "strict": true,
     "sourceMap": true,
     "esModuleInterop": true
@@ -23,7 +27,7 @@
     "src/**/*.tsx",
     "src/**/*.vue",
     "src/directive/v-tooltip/test/*.spec.ts",
-    "src/directive/v-ripple/index.ts",
+    "src/directive/v-ripple/index.ts"
   ],
   "exclude": ["node_modules", "./src/directive/v-tooltip/*"]
 }

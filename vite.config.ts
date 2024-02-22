@@ -37,6 +37,7 @@ export default defineConfig({
     },
   },
   define: {
+    // eslint-disable-next-line ts/no-var-requires, ts/no-require-imports
     VERSION: JSON.stringify(require('./package.json').version),
   },
 })
