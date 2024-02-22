@@ -6,7 +6,7 @@ import dts from 'vite-plugin-dts'
 export default defineConfig({
   plugins: [
     vue(),
-    dts({ rollupTypes: true })
+    dts()
   ],
   build: {
     lib: {
