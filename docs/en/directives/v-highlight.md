@@ -2,12 +2,22 @@
 
 ## Function Introduction
 
-🚧 正在施工中 🚧
+Text highlighting
 
 ## Example
 
-🚧 正在施工中 🚧
+<div style="display: flex;gap: 10px">
+<span v-highlight>Text highlighting</span>
+<span v-highlight:red>Text highlighting</span>
+<span v-highlight:#3271ae>Text highlighting</span>
+</div>
 
 ## Usage
 
-🚧 正在施工中 🚧
+```typescript {2-4}
+<tempalte>
+  <span v-highlight>Text highlighting</span>
+  <span v-highlight:red>Text highlighting</span>
+  <span v-highlight:#3271ae>Text highlighting</span>
+</template>
+```

@@ -11,8 +11,8 @@ hero:
       text: 起步
       link: /zh/guide/start
     - theme: alt
-      text: 指令案例
-      link: /zh/directives/v-copy
+      text: 指令预览
+      link: /zh/guide/directives.html#所有指令
     - theme: alt
       text: 前往 Github
       link: https://github.com/ileostar/v3-directives

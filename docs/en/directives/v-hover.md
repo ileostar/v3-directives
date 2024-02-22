@@ -2,13 +2,46 @@
 
 ## Function Introduction
 
-🚧 正在施工中 🚧
+Triggers a callback after the element
 
 ## Example
 
-🚧 正在施工中 🚧
+<script setup lang="ts">
+  const handler = () => {
+    window.alert('Mouse over')
+  }
+</script>
+<div
+  v-hover="handler"
+  :style="{
+    width: '200px',
+    height: '200px',
+    background: 'blue',
+    borderRadius: '5px'
+  }"
+>
+  Hover
+</div>
 
 ## Usage
 
-🚧 正在施工中 🚧
-
+```typescript {8}
+<script setup lang="ts">
+  const handler = () => {
+    window.alert('Mouse over')
+  }
+</script>
+<template>
+  <div
+    v-hover="handler"
+    :style="{
+      width: '200px',
+      height: '200px',
+      background: 'blue',
+      borderRadius: '5px'
+      }"
+    >
+    Hover
+  </div>
+</template>
+```

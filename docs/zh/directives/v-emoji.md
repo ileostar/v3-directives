@@ -10,7 +10,6 @@
 
 ## 使用
 
-
 ```typescript {2}
 <template>
   <input type="text" v-emoji />

@@ -2,7 +2,7 @@
 
 ## 功能介绍
 
-为事件触发添加防抖功能
+防抖功能
 
 ## 示例
 
@@ -45,7 +45,7 @@
 |  参数   | 类型  |   默认   | 说明  |
 |  ----  | ----  |  ----  | ----  |
 | eventType  | [事件修饰符](https://cn.vuejs.org/guide/essentials/event-handling.html#event-modifiers) |   click   | 事件类型，可为空 |
-| delay  | 时间，毫秒为单位 |   300   | 事件类型，可为空  |
+| delay  | 时间，毫秒为单位 |   300   | 延迟时间，可为空  |
 | handleEvent  | - |   -   | 处理事件，必填  |
 
 > **举例: v-debounce:click-1000="handle"**

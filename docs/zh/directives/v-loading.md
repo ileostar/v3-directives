@@ -58,6 +58,6 @@ const loading = ref(false)
       backgroundSize: 'cover',
       borderRadius: '5px'
     }"></div>
-  <button @click="loading.value = !loading.value">switch</button>
+  <button @click="loading.value = !loading.value">状态切换</button>
 </template>
 ```

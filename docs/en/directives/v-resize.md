@@ -2,12 +2,32 @@
 
 ## Function Introduction
 
-🚧 正在施工中 🚧
+Response to resize the element
 
 ## Example
 
-🚧 正在施工中 🚧
+<div
+    v-resize
+    :style="{
+        width: '100px',
+        height: '100px',
+        background: 'blue',
+        borderRadius: '5px'
+    }"
+  ></div>
 
 ## Usage
 
-🚧 正在施工中 🚧
+```typescript {3}
+<template>
+  <div
+    v-resize
+    :style="{
+        width: '100px',
+        height: '100px',
+        background: 'blue',
+        borderRadius: '5px'
+    }"
+  ></div>
+</template>
+```

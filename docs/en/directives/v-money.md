@@ -2,12 +2,16 @@
 
 ## Function Introduction
 
-🚧 正在施工中 🚧
+Format numbers into money format
 
 ## Example
 
-🚧 正在施工中 🚧
+<span v-money="123456789.123456"></span>
 
 ## Usage
 
-🚧 正在施工中 🚧
+```typescript {2}
+<template>
+  <span v-money="123456789.123456"></span>
+</template>
+```

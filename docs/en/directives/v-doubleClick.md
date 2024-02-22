@@ -2,12 +2,40 @@
 
 ## Function Introduction
 
-🚧 正在施工中 🚧
+Trigger an event on double-click
 
 ## Example
 
-🚧 正在施工中 🚧
+<script setup lang="ts">
+  const handle = () => {
+    window.alert('Triggered an event')
+  }
+</script>
+
+
+<button
+  v-doubleClick="handle"
+  :style="{
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    border: '1px solid #ccc',
+    padding: '10px',
+    borderRadius: '5px'
+    }">
+  Double click me
+</button>
+
 
 ## Usage
 
-🚧 正在施工中 🚧
+```typescript {7}
+<script setup lang="ts">
+  const handle = () => {
+    window.alert('Triggered an event')
+  }
+</script>
+<template>
+  <button v-doubleClick="handle">Double click me</button>
+</template>
+```

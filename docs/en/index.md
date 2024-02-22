@@ -11,8 +11,8 @@ hero:
       text: Quick Start
       link: /en/guide/start
     - theme: alt
-      text: Directives
-      link: /en/directives/v-copy
+      text: Directives Preview
+      link: /en/guide/directives.html#all-directives
     - theme: alt
       text: View on Github
       link: https://github.com/ileostar/v3-directives

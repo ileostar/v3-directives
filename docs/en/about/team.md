@@ -14,7 +14,7 @@ const members = [
   {
     avatar: 'https://avatars.githubusercontent.com/u/108746194?s=96&v=4',
     name: 'LeoStar',
-    title: '一个不太正经的前端Coder',
+    title: 'A not-so-serious front-end Coder',
     links: [
       { icon: 'github', link: 'https://github.com/030liuxinghao' },
       { icon: 'x', link: 'https://twitter.com/030LeoStar' }

@@ -19,12 +19,12 @@ const inputValue3 = ref('')
   flexDirection: 'column',
   gap: '10px'
 }">
-  <div><label>限制数字：</label><input :style="{
+  <div><label>限制为数字：</label><input :style="{
     border: '1px solid #ccc',
     padding: '5px',
     borderRadius: '5px'
     }" type="text" v-input:number v-model="inputValue" /></div>
-  <div><label>限制小数点：</label><input :style="{
+  <div><label>限制为小数点：</label><input :style="{
     border: '1px solid #ccc',
     padding: '5px',
     borderRadius: '5px'
@@ -42,11 +42,11 @@ const inputValue3 = ref('')
 ```typescript {4,8,12}
 <template>
   <div>
-    <label>限制数字：</label>
+    <label>限制为数字：</label>
     <input type="text" v-input:number />
   </div>
   <div>
-    <label>限制小数点：</label>
+    <label>限制为小数点：</label>
     <input type="text" v-input:decimal="3" />
   </div>
   <div>

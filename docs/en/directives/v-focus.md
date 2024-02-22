@@ -2,12 +2,24 @@
 
 ## Function Introduction
 
-🚧 正在施工中 🚧
+Input box autofocus
 
 ## Example
 
-🚧 正在施工中 🚧
+<input 
+  :style="{
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    border: '1px solid #ccc',
+    padding: '5px',
+    borderRadius: '5px'
+    }" v-focus />
 
 ## Usage
 
-🚧 正在施工中 🚧
+```typescript {2}
+<template>
+  <input v-focus />
+</template>
+```

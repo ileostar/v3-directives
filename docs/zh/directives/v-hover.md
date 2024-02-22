@@ -28,7 +28,7 @@
 ```typescript {8}
 <script setup lang="ts">
   const handler = () => {
-    window.alert('hover')
+    window.alert('鼠标经过')
   }
 </script>
 <template>

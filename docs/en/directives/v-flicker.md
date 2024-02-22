@@ -2,12 +2,29 @@
 
 ## Function Introduction
 
-🚧 正在施工中 🚧
+Element flicker
 
 ## Example
 
-🚧 正在施工中 🚧
+<div v-flicker
+  :style="{
+    width: '200px',
+    height: '200px',
+    borderRadius: '5px',
+    background: 'blue',
+  }"></div>
 
 ## Usage
 
-🚧 正在施工中 🚧
+```typescript {3}
+<template>
+  <div
+    v-flicker
+    :style="{
+      width: '100px',
+      height: '100px',
+      borderRadius: '5px',
+      background: 'blue',
+    }"></div>
+</template>
+```

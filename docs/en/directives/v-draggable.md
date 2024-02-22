@@ -2,12 +2,47 @@
 
 ## Function Introduction
 
-🚧 正在施工中 🚧
+Makes elements draggable
 
 ## Example
 
-🚧 正在施工中 🚧
+<script setup lang="ts"></script>
+<div
+  v-draggable
+  :style="{
+    width: '100px',
+    height: '100px',
+    background: 'blue',
+    borderRadius: '50px',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    transform: 'translateX(50px)',
+    color: 'white'
+  }"
+>
+  Drag me
+</div>
 
 ## Usage
 
-🚧 正在施工中 🚧
+```typescript {4}
+<script setup lang="ts"></script>
+<template>
+  <div
+    v-draggable
+    :style="{
+      width: '100px',
+      height: '100px',
+      background: 'blue',
+      borderRadius: '50px',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      transform: 'translateX(50px)'
+    }"
+  >
+    Drag me
+  </div>
+</template>
+```
