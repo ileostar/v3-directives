@@ -4,6 +4,7 @@ import DefaultTheme from 'vitepress/theme'
 import './style.css'
 
 import VueDirectives from '../../../src'
+
 export default {
   extends: DefaultTheme,
   enhanceApp({ app }) {

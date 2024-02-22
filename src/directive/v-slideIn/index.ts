@@ -5,28 +5,30 @@ const ANIMATIONTIME = 500 // 500毫秒
 let distance: number | null = null
 let animationtime: number | null = null
 const map = new WeakMap()
-const ob = new IntersectionObserver((entries) => {
-  for (const entrie of entries) {
-    if (entrie.isIntersecting) {
-      const animation = map.get(entrie.target)
-      if (animation) {
-        animation.play()
-        ob.unobserve(entrie.target)
-      }
-    }
-  }
-})
+
 function isBelowViewport(el: HTMLElement) {
   const rect = el.getBoundingClientRect()
   return rect.top - (distance || DISTANCE) > window.innerHeight
 }
 
+function handleScroll() {
+  const elements = document.querySelectorAll('[v-slide-in]')
+  elements.forEach((el: any) => {
+    if (isBelowViewport(el)) return
+
+    const animation = map.get(el)
+    if (animation) {
+      animation.play()
+      el.removeAttribute('v-slide-in')
+    }
+  })
+}
+
 const vSlideIn: Directive = {
   mounted(el: HTMLElement, binding: any) {
-    if (binding.value) { // 传值？
-      console.log(binding.value)// 打印
-      distance = binding.value.px// 接收指定距离
-      animationtime = binding.value.time// 接收指定时间
+    if (binding.value) {
+      distance = binding.value.px // 接收指定距离
+      animationtime = binding.value.time // 接收指定时间
     }
     if (!isBelowViewport(el))
       return
@@ -50,11 +52,14 @@ const vSlideIn: Directive = {
     )
     animation.pause()
     map.set(el, animation)
-    ob.observe(el)
+    el.setAttribute('v-slide-in', '') // 添加标记，表示需要进行动画
+
+    window.addEventListener('scroll', handleScroll)
   },
 
   unmounted(el: HTMLElement) {
-    ob.unobserve(el)
+    map.delete(el)
+    window.removeEventListener('scroll', handleScroll)
   },
 }
 

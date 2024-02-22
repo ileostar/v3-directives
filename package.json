@@ -1,8 +1,8 @@
 {
   "name": "@ileostar/v3-directives",
+  "type": "module",
   "version": "0.0.5",
   "packageManager": "pnpm@8.15.3",
-  "type": "module",
   "description": "Custom Vue3 directives",
   "author": "ileostar <hi@leostar.top> (https://github.com/ileostar)",
   "license": "MIT",
@@ -15,17 +15,17 @@
     "directives",
     "vue3"
   ],
-  "main": "dist/index.js",
   "exports": {
     ".": {
       "import": "./dist/index.mjs",
       "require": "./dist/index.js"
     }
   },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
-  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch & eslint-flat-config-viewer",

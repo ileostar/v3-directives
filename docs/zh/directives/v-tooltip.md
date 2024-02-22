@@ -10,6 +10,7 @@
 import { ref } from 'vue'
 
 const show = ref('提示信息2')
+const count = ref(0)
 </script>
 
 <div :style="{
@@ -41,6 +42,7 @@ const show = ref('提示信息2')
 import { ref } from 'vue'
 
 const show = ref('提示信息2')
+const count = ref(0)
 </script>
 
 <template>

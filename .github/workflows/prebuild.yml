@@ -1,4 +1,4 @@
-name: Test
+name: Prebuild
 
 on:
   push:
@@ -36,4 +36,7 @@ jobs:
 
       - name: Build
         run: pnpm run build
+
+      - name: Build Docs
+        run: pnpm run docs:build
 

@@ -10,6 +10,7 @@ Adding Tooltips to Elements
 import { ref } from 'vue'
 
 const show = ref('Reminder 2')
+const count = ref(0)
 </script>
 
 <div :style="{
@@ -41,6 +42,7 @@ const show = ref('Reminder 2')
 import { ref } from 'vue'
 
 const show = ref('Reminder 2')
+const count = ref(0)
 </script>
 
 <template>
