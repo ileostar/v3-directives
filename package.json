@@ -17,19 +17,17 @@
   ],
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
     }
   },
-  "main": "dist/index.cjs",
+  "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
-    "*.d.ts",
     "dist"
   ],
   "scripts": {
-    "dev": "tsup --watch",
+    "dev": "tsup --watch & eslint-flat-config-viewer",
     "build": "tsup",
     "start": "esno src/index.ts",
     "test": "vitest",
