@@ -4,15 +4,15 @@
  * @LastEditTime: 2024/02/07 11:12:16
  * @description: 点击元素外部触发时事件
  */
-import { Directive, DirectiveBinding } from 'vue'
+import type { Directive, DirectiveBinding } from 'vue'
 
 const elMapToHandlers: WeakMap<Element, (e: MouseEvent) => void> = new WeakMap()
 
-const addEventListener = (el: Element, binding: DirectiveBinding) => {
+function addEventListener(el: Element, binding: DirectiveBinding) {
   const handler = (e: MouseEvent) => {
-    if (el.contains(e.target as Node)) {
+    if (el.contains(e.target as Node))
       return
-    }
+
     const { value } = binding
     value()
   }
@@ -21,6 +21,14 @@ const addEventListener = (el: Element, binding: DirectiveBinding) => {
 }
 
 const vClickOut: Directive = {
+  beforeUnmount(el: HTMLElement) {
+    if (elMapToHandlers.has(el)) {
+      const handler = elMapToHandlers.get(el)
+
+      handler && window.removeEventListener('click', handler)
+      elMapToHandlers.delete(el)
+    }
+  },
   mounted(el: HTMLElement, binding: DirectiveBinding) {
     addEventListener(el, binding)
   },
@@ -32,14 +40,6 @@ const vClickOut: Directive = {
     }
     addEventListener(el, binding)
   },
-  beforeUnmount(el: HTMLElement) {
-    if (elMapToHandlers.has(el)) {
-      const handler = elMapToHandlers.get(el)
-
-      handler && window.removeEventListener('click', handler)
-      elMapToHandlers.delete(el)
-    }
-  }
 }
 
 export default vClickOut

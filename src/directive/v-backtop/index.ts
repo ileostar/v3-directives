@@ -4,59 +4,57 @@
  * @LastEditTime: 2024/02/13 14:05:16
  * @description: 为元素添加返回顶部功能
  */
-import { Directive, DirectiveBinding } from 'vue';
+import type { Directive, DirectiveBinding } from 'vue'
 
 interface BackTopElement extends HTMLElement {
-  style: CSSStyleDeclaration;
+  style: CSSStyleDeclaration
 }
 
 // 定义通用的滚动元素接口
 interface ScrollableElement extends HTMLElement {
-  scrollTop: number;
+  scrollTop: number
 }
 
 const vBackTop: Directive = {
   mounted(el: BackTopElement, binding: DirectiveBinding<number | undefined>) {
-    const target = binding.arg ? document.getElementById(binding.arg) as (Window | HTMLElement) : window;
-    el.addEventListener("click", () => {
+    const target = binding.arg ? document.getElementById(binding.arg) as (Window | HTMLElement) : window
+    el.addEventListener('click', () => {
       target.scrollTo({
+        behavior: 'smooth',
         top: 0,
-        behavior: "smooth",
-      });
-    });
+      })
+    })
     const handleScroll = () => {
-      const isScrolledUp = (target as ScrollableElement).scrollTop < (binding.value as number);
-      el.style.visibility = isScrolledUp ? "hidden" : "unset";
-    };
-    if ((target as ScrollableElement).scrollTop < (binding.value as number)) {
-      el.style.visibility = "hidden";
+      const isScrolledUp = (target as ScrollableElement).scrollTop < (binding.value as number)
+      el.style.visibility = isScrolledUp ? 'hidden' : 'unset'
     }
-    (target as ScrollableElement).addEventListener("scroll", handleScroll);
-  },
-  updated(el: BackTopElement, binding: DirectiveBinding<number | undefined>) {
-    const target = binding.arg ? document.getElementById(binding.arg) as (Window | HTMLElement) : window;
-    const handleScroll = () => {
-      const isScrolledUp = (target as ScrollableElement).scrollTop < (binding.value as number);
-      el.style.visibility = isScrolledUp ? "hidden" : "unset";
-    };
+    if ((target as ScrollableElement).scrollTop < (binding.value as number))
+      el.style.visibility = 'hidden';
 
-    if (binding.value !== undefined) {
-      (target as ScrollableElement).addEventListener("scroll", handleScroll);
-    } else {
-      (target as ScrollableElement).removeEventListener("scroll", handleScroll);
-    }
+    (target as ScrollableElement).addEventListener('scroll', handleScroll)
   },
   unmounted(el: BackTopElement, binding: DirectiveBinding<number | undefined>) {
-    const target = binding.arg ? document.getElementById(binding.arg) as (Window | HTMLElement) : window;
+    const target = binding.arg ? document.getElementById(binding.arg) as (Window | HTMLElement) : window
     const handleScroll = () => {
-      const isScrolledUp = (target as ScrollableElement).scrollTop < (binding.value as number);
-      el.style.visibility = isScrolledUp ? "hidden" : "unset";
+      const isScrolledUp = (target as ScrollableElement).scrollTop < (binding.value as number)
+      el.style.visibility = isScrolledUp ? 'hidden' : 'unset'
     };
 
-    (target as ScrollableElement).removeEventListener("scroll", handleScroll);
-    el.removeEventListener("click", handleScroll)
+    (target as ScrollableElement).removeEventListener('scroll', handleScroll)
+    el.removeEventListener('click', handleScroll)
   },
-};
+  updated(el: BackTopElement, binding: DirectiveBinding<number | undefined>) {
+    const target = binding.arg ? document.getElementById(binding.arg) as (Window | HTMLElement) : window
+    const handleScroll = () => {
+      const isScrolledUp = (target as ScrollableElement).scrollTop < (binding.value as number)
+      el.style.visibility = isScrolledUp ? 'hidden' : 'unset'
+    }
 
-export default vBackTop;
+    if (binding.value !== undefined)
+      (target as ScrollableElement).addEventListener('scroll', handleScroll)
+    else
+      (target as ScrollableElement).removeEventListener('scroll', handleScroll)
+  },
+}
 
+export default vBackTop

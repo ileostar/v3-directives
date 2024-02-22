@@ -5,15 +5,16 @@
  * @description: 响应缩放
  */
 
-import { Directive } from 'vue'
+import type { Directive } from 'vue'
+
 function createYElement(type: 'top' | 'bottom'): HTMLDivElement {
   const Element = document.createElement('div')
   Element.style.position = 'absolute'
-  if (type === 'top') {
+  if (type === 'top')
     Element.style.top = '0'
-  } else {
+  else
     Element.style.bottom = '0'
-  }
+
   Element.style.left = '0'
   Element.style.right = '0'
   Element.style.height = '5px'
@@ -29,11 +30,11 @@ function createXElement(type: 'left' | 'right'): HTMLDivElement {
   const Element = document.createElement('div')
   Element.style.position = 'absolute'
   Element.style.top = '5px'
-  if (type === 'left') {
+  if (type === 'left')
     Element.style.left = '0'
-  } else {
+  else
     Element.style.right = '0'
-  }
+
   Element.style.bottom = '5px'
   Element.style.width = '5px'
   Element.style.backgroundColor = '#1890ff'
@@ -48,9 +49,8 @@ function createXElement(type: 'left' | 'right'): HTMLDivElement {
 const vResize: Directive = {
   mounted(el: HTMLElement) {
     const position = el.style.position
-    if (position === 'static' || position === '') {
+    if (position === 'static' || position === '')
       el.style.position = 'relative'
-    }
 
     const topElement = createYElement('top')
     const bottomElement = createYElement('bottom')
@@ -72,7 +72,7 @@ const vResize: Directive = {
 
         const windowMouseMoveHandler = (e: MouseEvent) => {
           const offsetY = e.clientY - startY
-          el.style.height = `${parseInt(height, 10) + offsetY}px`
+          el.style.height = `${Number.parseInt(height, 10) + offsetY}px`
         }
 
         const windowMouseUpHandler = () => {
@@ -97,7 +97,7 @@ const vResize: Directive = {
 
         const windowMouseMoveHandler = (e: MouseEvent) => {
           const offsetX = e.clientX - startX
-          el.style.width = `${parseInt(width, 10) + offsetX}px`
+          el.style.width = `${Number.parseInt(width, 10) + offsetX}px`
         }
 
         const windowMouseUpHandler = () => {
@@ -118,9 +118,8 @@ const vResize: Directive = {
     })
 
     const handler = (e: MouseEvent) => {
-      if (el.contains(e.target as Node)) {
+      if (el.contains(e.target as Node))
         return
-      }
 
       all.forEach((element) => {
         element.style.display = 'none'
@@ -132,6 +131,6 @@ const vResize: Directive = {
     el.appendChild(bottomElement)
     el.appendChild(leftElement)
     el.appendChild(rightElement)
-  }
+  },
 }
 export default vResize

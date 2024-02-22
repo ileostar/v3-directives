@@ -4,10 +4,9 @@
  * @LastEditTime: 2024/02/07 11:12:16
  * @description: 实现文本复制到剪贴板功能
  */
-import { Directive, DirectiveBinding } from 'vue'
+import type { Directive, DirectiveBinding } from 'vue'
 
-const addEventListener = (el: Element, binding: DirectiveBinding) => {
-
+function addEventListener(el: Element, binding: DirectiveBinding) {
   const { value } = binding
 
   el.setAttribute('copyValue', String(value))
@@ -33,7 +32,7 @@ const vCopy: Directive = {
   updated(el: HTMLElement, binding) {
     const { value } = binding
     el.setAttribute('copyValue', String(value))
-  }
+  },
 }
 
 export default vCopy

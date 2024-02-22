@@ -1,15 +1,15 @@
 export const SHOW_EVENT_MAP = {
-  hover: 'mouseenter',
-  focus: 'focus',
   click: 'click',
-  touch: 'touchstart',
+  focus: 'focus',
+  hover: 'mouseenter',
   pointer: 'pointerdown',
+  touch: 'touchstart',
 }
 
 export const HIDE_EVENT_MAP = {
-  hover: 'mouseleave',
-  focus: 'blur',
   click: 'click',
-  touch: 'touchend',
+  focus: 'blur',
+  hover: 'mouseleave',
   pointer: 'pointerup',
+  touch: 'touchend',
 }

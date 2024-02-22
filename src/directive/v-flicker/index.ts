@@ -4,7 +4,7 @@
  * @LastEditTime: 2024/02/07 11:12:16
  * @description: 元素闪烁
  */
-import { Directive } from 'vue'
+import type { Directive } from 'vue'
 
 let style: HTMLStyleElement | null = null
 
@@ -31,7 +31,7 @@ const vFlicker: Directive = {
     }
 
     el.style.animation = 'v-flicker 1s infinite'
-  }
+  },
 }
 
 export default vFlicker

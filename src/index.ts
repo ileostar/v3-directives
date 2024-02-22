@@ -1,4 +1,4 @@
-import { App, Directive } from 'vue'
+import type { App, Directive } from 'vue'
 import backtop from './directive/v-backtop'
 import clickOutside from './directive/v-clickOutside'
 import copy from './directive/v-copy'
@@ -56,7 +56,7 @@ const directives: DirectiveCollection = {
   slideIn,
   throttle,
   tooltip,
-  waterMarker
+  waterMarker,
 }
 
 export default {
@@ -64,5 +64,5 @@ export default {
     Object.keys(directives).forEach((key) => {
       app.directive(key, directives[key])
     })
-  }
+  },
 }

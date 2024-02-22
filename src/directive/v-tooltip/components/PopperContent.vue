@@ -1,3 +1,47 @@
+<script lang="ts">
+import { defineComponent } from 'vue'
+import { ResizeObserver } from 'vue-resize'
+import ThemeClass from './ThemeClass'
+
+export default defineComponent({
+  name: 'VPopperContent',
+
+  components: {
+    ResizeObserver,
+  },
+
+  mixins: [
+    ThemeClass(),
+  ],
+
+  props: {
+    popperId: String,
+    theme: String,
+    shown: Boolean,
+    mounted: Boolean,
+    skipTransition: Boolean,
+    autoHide: Boolean,
+    handleResize: Boolean,
+    classes: Object,
+    result: Object,
+  },
+
+  emits: [
+    'hide',
+    'resize',
+  ],
+
+  methods: {
+    toPx(value) {
+      if (value != null && !isNaN(value))
+        return `${value}px`
+
+      return null
+    },
+  },
+})
+</script>
+
 <template>
   <div
     :id="popperId"
@@ -68,50 +112,6 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
-import { ResizeObserver } from 'vue-resize'
-import ThemeClass from './ThemeClass'
-
-export default defineComponent({
-  name: 'VPopperContent',
-
-  components: {
-    ResizeObserver,
-  },
-
-  mixins: [
-    ThemeClass(),
-  ],
-
-  props: {
-    popperId: String,
-    theme: String,
-    shown: Boolean,
-    mounted: Boolean,
-    skipTransition: Boolean,
-    autoHide: Boolean,
-    handleResize: Boolean,
-    classes: Object,
-    result: Object,
-  },
-
-  emits: [
-    'hide',
-    'resize',
-  ],
-
-  methods: {
-    toPx (value) {
-      if (value != null && !isNaN(value)) {
-        return `${value}px`
-      }
-      return null
-    },
-  },
-})
-</script>
-
 <style scoped>
 /* Content */
 
@@ -125,14 +125,16 @@ export default defineComponent({
 .v-popper__popper.v-popper__popper--hidden {
   visibility: hidden;
   opacity: 0;
-  transition: opacity .15s, visibility .15s;
+  transition:
+    opacity 0.15s,
+    visibility 0.15s;
   pointer-events: none;
 }
 
 .v-popper__popper.v-popper__popper--shown {
   visibility: visible;
   opacity: 1;
-  transition: opacity .15s;
+  transition: opacity 0.15s;
 }
 
 .v-popper__popper.v-popper__popper--skip-transition,
@@ -192,101 +194,101 @@ export default defineComponent({
   border-width: 6px;
 }
 
-.v-popper__popper[data-popper-placement^="top"] .v-popper__arrow-inner,
-.v-popper__popper[data-popper-placement^="bottom"] .v-popper__arrow-inner {
+.v-popper__popper[data-popper-placement^='top'] .v-popper__arrow-inner,
+.v-popper__popper[data-popper-placement^='bottom'] .v-popper__arrow-inner {
   left: -2px;
 }
 
-.v-popper__popper[data-popper-placement^="top"] .v-popper__arrow-outer,
-.v-popper__popper[data-popper-placement^="bottom"] .v-popper__arrow-outer {
+.v-popper__popper[data-popper-placement^='top'] .v-popper__arrow-outer,
+.v-popper__popper[data-popper-placement^='bottom'] .v-popper__arrow-outer {
   left: -1px;
 }
 
-.v-popper__popper[data-popper-placement^="top"] .v-popper__arrow-inner,
-.v-popper__popper[data-popper-placement^="top"] .v-popper__arrow-outer {
+.v-popper__popper[data-popper-placement^='top'] .v-popper__arrow-inner,
+.v-popper__popper[data-popper-placement^='top'] .v-popper__arrow-outer {
   border-bottom-width: 0;
   border-left-color: transparent !important;
   border-right-color: transparent !important;
   border-bottom-color: transparent !important;
 }
 
-.v-popper__popper[data-popper-placement^="top"] .v-popper__arrow-inner {
+.v-popper__popper[data-popper-placement^='top'] .v-popper__arrow-inner {
   top: -2px;
 }
 
-.v-popper__popper[data-popper-placement^="bottom"] .v-popper__arrow-container {
+.v-popper__popper[data-popper-placement^='bottom'] .v-popper__arrow-container {
   top: 0;
 }
 
-.v-popper__popper[data-popper-placement^="bottom"] .v-popper__arrow-inner,
-.v-popper__popper[data-popper-placement^="bottom"] .v-popper__arrow-outer {
+.v-popper__popper[data-popper-placement^='bottom'] .v-popper__arrow-inner,
+.v-popper__popper[data-popper-placement^='bottom'] .v-popper__arrow-outer {
   border-top-width: 0;
   border-left-color: transparent !important;
   border-right-color: transparent !important;
   border-top-color: transparent !important;
 }
 
-.v-popper__popper[data-popper-placement^="bottom"] .v-popper__arrow-inner {
+.v-popper__popper[data-popper-placement^='bottom'] .v-popper__arrow-inner {
   top: -4px;
 }
 
-.v-popper__popper[data-popper-placement^="bottom"] .v-popper__arrow-outer {
+.v-popper__popper[data-popper-placement^='bottom'] .v-popper__arrow-outer {
   top: -6px;
 }
 
-.v-popper__popper[data-popper-placement^="left"] .v-popper__arrow-inner,
-.v-popper__popper[data-popper-placement^="right"] .v-popper__arrow-inner {
+.v-popper__popper[data-popper-placement^='left'] .v-popper__arrow-inner,
+.v-popper__popper[data-popper-placement^='right'] .v-popper__arrow-inner {
   top: -2px;
 }
 
-.v-popper__popper[data-popper-placement^="left"] .v-popper__arrow-outer,
-.v-popper__popper[data-popper-placement^="right"] .v-popper__arrow-outer {
+.v-popper__popper[data-popper-placement^='left'] .v-popper__arrow-outer,
+.v-popper__popper[data-popper-placement^='right'] .v-popper__arrow-outer {
   top: -1px;
 }
 
-.v-popper__popper[data-popper-placement^="right"] .v-popper__arrow-inner,
-.v-popper__popper[data-popper-placement^="right"] .v-popper__arrow-outer {
+.v-popper__popper[data-popper-placement^='right'] .v-popper__arrow-inner,
+.v-popper__popper[data-popper-placement^='right'] .v-popper__arrow-outer {
   border-left-width: 0;
   border-left-color: transparent !important;
   border-top-color: transparent !important;
   border-bottom-color: transparent !important;
 }
 
-.v-popper__popper[data-popper-placement^="right"] .v-popper__arrow-inner {
+.v-popper__popper[data-popper-placement^='right'] .v-popper__arrow-inner {
   left: -4px;
 }
 
-.v-popper__popper[data-popper-placement^="right"] .v-popper__arrow-outer {
+.v-popper__popper[data-popper-placement^='right'] .v-popper__arrow-outer {
   left: -6px;
 }
 
-.v-popper__popper[data-popper-placement^="left"] .v-popper__arrow-container {
+.v-popper__popper[data-popper-placement^='left'] .v-popper__arrow-container {
   right: -10px;
 }
 
-.v-popper__popper[data-popper-placement^="left"] .v-popper__arrow-inner,
-.v-popper__popper[data-popper-placement^="left"] .v-popper__arrow-outer {
+.v-popper__popper[data-popper-placement^='left'] .v-popper__arrow-inner,
+.v-popper__popper[data-popper-placement^='left'] .v-popper__arrow-outer {
   border-right-width: 0;
   border-top-color: transparent !important;
   border-right-color: transparent !important;
   border-bottom-color: transparent !important;
 }
 
-.v-popper__popper[data-popper-placement^="left"] .v-popper__arrow-inner {
+.v-popper__popper[data-popper-placement^='left'] .v-popper__arrow-inner {
   left: -2px;
 }
 
 /* Tooltip */
 
 .v-popper--theme-tooltip .v-popper__inner {
-  background: rgba(0, 0, 0, .8);
+  background: rgba(0, 0, 0, 0.8);
   color: white;
   border-radius: 6px;
   padding: 7px 12px 6px;
 }
 
 .v-popper--theme-tooltip .v-popper__arrow-outer {
-  border-color: rgba(0, 0, 0, .8);
+  border-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Dropdown */
@@ -296,7 +298,7 @@ export default defineComponent({
   color: black;
   border-radius: 6px;
   border: 1px solid #ddd;
-  box-shadow: 0 6px 30px rgba(0, 0, 0, .1);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
 }
 
 .v-popper--theme-dropdown .v-popper__arrow-inner {
@@ -307,5 +309,4 @@ export default defineComponent({
 .v-popper--theme-dropdown .v-popper__arrow-outer {
   border-color: #ddd;
 }
-
 </style>

@@ -4,7 +4,7 @@
  * @LastEditTime: 2024/02/07 11:12:16
  * @description: 使元素可拖拽
  */
-import { Directive } from 'vue'
+import type { Directive } from 'vue'
 
 const vDraggable: Directive = {
   mounted(el: HTMLElement) {
@@ -22,7 +22,7 @@ const vDraggable: Directive = {
     const transformValue = window
       .getComputedStyle(el)
       .transform.split(',')
-      .map((item) => parseInt(item))
+      .map(item => Number.parseInt(item))
       .slice(4, 6)
 
     if (transformValue.length > 1) {
@@ -51,6 +51,6 @@ const vDraggable: Directive = {
       endY = offsetYY
       window.removeEventListener('mousemove', handler)
     })
-  }
+  },
 }
 export default vDraggable

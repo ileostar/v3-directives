@@ -1,11 +1,11 @@
+import type { Directive } from 'vue'
 import { isBoolean, loadingSvg } from '../../utils'
-import { Directive } from 'vue'
 
 const elMapToMaskElement: WeakMap<Element, HTMLDivElement> = new WeakMap()
 
 const elMapToHasChangedPosition: WeakMap<Element, boolean> = new WeakMap()
 
-const appendChild = (el: HTMLElement): void => {
+function appendChild(el: HTMLElement): void {
   const loadingWrapper = document.createElement('div')
   const maskElement = document.createElement('div')
   maskElement.style.position = 'absolute'
@@ -33,21 +33,29 @@ const appendChild = (el: HTMLElement): void => {
 }
 
 const vLoading: Directive = {
+  beforeUnmount(el: HTMLElement) {
+    elMapToMaskElement.delete(el)
+    elMapToHasChangedPosition.delete(el)
+  },
   mounted(el: HTMLElement, binding) {
     const { value } = binding
-    if (!isBoolean(value)) return
-    if (!value) return
+    if (!isBoolean(value))
+      return
+    if (!value)
+      return
     appendChild(el)
   },
   updated(el: HTMLElement, binding) {
     const { value } = binding
     const hasMaskElement = elMapToMaskElement.has(el)
     const hasChangedPosition = elMapToHasChangedPosition.has(el)
-    if (value && hasMaskElement) return
-    if (value && !hasMaskElement) {
+    if (value && hasMaskElement)
+      return
+    if (value && !hasMaskElement)
       appendChild(el)
-    }
-    if ((!value || !isBoolean(value)) && !hasMaskElement) return
+
+    if ((!value || !isBoolean(value)) && !hasMaskElement)
+      return
     if ((!value || !isBoolean(value)) && hasMaskElement) {
       if (hasChangedPosition) {
         el.style.position = 'static'
@@ -58,9 +66,5 @@ const vLoading: Directive = {
       elMapToMaskElement.delete(el)
     }
   },
-  beforeUnmount(el: HTMLElement) {
-    elMapToMaskElement.delete(el)
-    elMapToHasChangedPosition.delete(el)
-  }
 }
 export default vLoading

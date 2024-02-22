@@ -5,41 +5,41 @@
  * @description: 省略超出文本
  */
 
-import { App, createApp, h, Ref, ref } from 'vue'
-import TooltipDirective from './components/TooltipDirective.vue'
+import type { App, Ref } from 'vue'
+import { createApp, h, ref } from 'vue'
 import { getDefaultConfig } from '../../utils/config'
 import { placements } from '../../utils/popper'
+import TooltipDirective from './components/TooltipDirective.vue'
 
 const TARGET_CLASS = 'v-popper--has-tooltip'
 
 /**
  * Support placement as directive modifier
  */
-export function getPlacement (options, modifiers) {
+export function getPlacement(options, modifiers) {
   let result = options.placement
   if (!result && modifiers) {
     for (const pos of placements) {
-      if (modifiers[pos]) {
+      if (modifiers[pos])
         result = pos
-      }
     }
   }
-  if (!result) {
+  if (!result)
     result = getDefaultConfig(options.theme || 'tooltip', 'placement')
-  }
+
   return result
 }
 
-export function getOptions (el, value, modifiers) {
+export function getOptions(el, value, modifiers) {
   let options
   const type = typeof value
-  if (type === 'string') {
+  if (type === 'string')
     options = { content: value }
-  } else if (value && type === 'object') {
+  else if (value && type === 'object')
     options = value
-  } else {
+  else
     options = { content: false }
-  }
+
   options.placement = getPlacement(options, modifiers)
   options.targetNodes = () => [el]
   options.referenceNode = () => el
@@ -56,29 +56,30 @@ let directiveApp: App
 let directives: Ref<Directive[]>
 let uid = 0
 
-function ensureDirectiveApp () {
-  if (directiveApp) return
+function ensureDirectiveApp() {
+  if (directiveApp)
+    return
 
   directives = ref([])
 
   directiveApp = createApp({
-    name: 'VTooltipDirectiveApp',
-    setup () {
-      return {
-        directives,
-      }
+    devtools: {
+      hide: true,
     },
-    render () {
+    name: 'VTooltipDirectiveApp',
+    render() {
       return this.directives.map((directive) => {
         return h(TooltipDirective, {
           ...directive.options,
-          shown: directive.shown || directive.options.shown,
           key: directive.id,
+          shown: directive.shown || directive.options.shown,
         })
       })
     },
-    devtools: {
-      hide: true,
+    setup() {
+      return {
+        directives,
+      }
     },
   })
 
@@ -87,7 +88,7 @@ function ensureDirectiveApp () {
   directiveApp.mount(mountTarget)
 }
 
-export function createTooltip (el, value, modifiers) {
+export function createTooltip(el, value, modifiers) {
   ensureDirectiveApp()
   const options = ref(getOptions(el, value, modifiers))
   const shown = ref(false)
@@ -100,49 +101,50 @@ export function createTooltip (el, value, modifiers) {
   directives.value.push(item)
 
   // Class on target
-  if (el.classList) {
+  if (el.classList)
     el.classList.add(TARGET_CLASS)
-  }
 
   const result = el.$_popper = {
-    options,
-    item,
-    show () {
-      shown.value = true
-    },
-    hide () {
+    hide() {
       shown.value = false
+    },
+    item,
+    options,
+    show() {
+      shown.value = true
     },
   }
 
   return result
 }
 
-export function destroyTooltip (el) {
+export function destroyTooltip(el) {
   if (el.$_popper) {
     const index = directives.value.indexOf(el.$_popper.item)
-    if (index !== -1) directives.value.splice(index, 1)
+    if (index !== -1)
+      directives.value.splice(index, 1)
 
     delete el.$_popper
     delete el.$_popperOldShown
     delete el.$_popperMountTarget
   }
 
-  if (el.classList) {
+  if (el.classList)
     el.classList.remove(TARGET_CLASS)
-  }
 }
 
-export function bind (el, { value, modifiers }) {
+export function bind(el, { modifiers, value }) {
   const options = getOptions(el, value, modifiers)
   if (!options.content || getDefaultConfig(options.theme || 'tooltip', 'disabled')) {
     destroyTooltip(el)
-  } else {
+  }
+  else {
     let directive
     if (el.$_popper) {
       directive = el.$_popper
       directive.options.value = options
-    } else {
+    }
+    else {
       directive = createTooltip(el, value, modifiers)
     }
 
@@ -156,8 +158,8 @@ export function bind (el, { value, modifiers }) {
 
 export default {
   beforeMount: bind,
-  updated: bind,
-  beforeUnmount (el) {
+  beforeUnmount(el) {
     destroyTooltip(el)
   },
+  updated: bind,
 }

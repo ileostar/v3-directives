@@ -4,25 +4,27 @@
  * @LastEditTime: 2024/02/07 11:12:16
  * @description: 防抖功能
  */
-import { Directive, DirectiveBinding } from 'vue'
+import type { Directive, DirectiveBinding } from 'vue'
 import { isFunction } from '../../utils'
 
 const elMapToHandlers: WeakMap<Element, () => void> = new WeakMap()
 
 const elMapToEventName: WeakMap<Element, string> = new WeakMap()
 
-const addEventListener = (el: Element, binding: DirectiveBinding): void => {
-  const { value, arg } = binding
-  if (!isFunction(value)) return
+function addEventListener(el: Element, binding: DirectiveBinding): void {
+  const { arg, value } = binding
+  if (!isFunction(value))
+    return
 
   const delay = arg ? Number(arg.split('-')[1]) : 300
 
   const eventName = arg ? arg.split('-')[0] : 'click'
 
-  let timer: undefined | number = undefined
+  let timer: undefined | number
 
   const handler = (): void => {
-    if (timer) return
+    if (timer)
+      return
     timer = window.setTimeout(() => {
       value()
       timer = undefined
@@ -35,6 +37,10 @@ const addEventListener = (el: Element, binding: DirectiveBinding): void => {
 }
 
 const vDebounce: Directive = {
+  beforeUnmount(el: HTMLElement) {
+    elMapToHandlers.delete(el)
+    elMapToEventName.delete(el)
+  },
   mounted(el: HTMLElement, binding) {
     addEventListener(el, binding)
   },
@@ -42,19 +48,15 @@ const vDebounce: Directive = {
     if (elMapToHandlers.has(el)) {
       const eventName = elMapToEventName.get(el)
       const handler = elMapToHandlers.get(el)
-      handler &&
-        eventName &&
-        el.removeEventListener(eventName as keyof HTMLElementEventMap, handler)
+      handler
+      && eventName
+      && el.removeEventListener(eventName as keyof HTMLElementEventMap, handler)
       elMapToHandlers.delete(el)
       elMapToEventName.delete(el)
     }
 
     addEventListener(el, binding)
   },
-  beforeUnmount(el: HTMLElement) {
-    elMapToHandlers.delete(el)
-    elMapToEventName.delete(el)
-  }
 }
 
 export default vDebounce

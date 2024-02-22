@@ -4,12 +4,12 @@
  * @LastEditTime: 2024/02/07 11:12:16
  * @description: 鼠标经过触发事件
  */
-import { Directive, DirectiveBinding } from 'vue'
+import type { Directive, DirectiveBinding } from 'vue'
 import { isFunction } from '../../utils/index'
 
 const elMapToHandlers: WeakMap<Element, () => void> = new WeakMap()
 
-const addEventListener = (el: Element, binding: DirectiveBinding): void => {
+function addEventListener(el: Element, binding: DirectiveBinding): void {
   const { value } = binding
   if (isFunction(value)) {
     el.addEventListener('mouseenter', value)
@@ -18,6 +18,9 @@ const addEventListener = (el: Element, binding: DirectiveBinding): void => {
 }
 
 const vHover: Directive = {
+  beforeUnmount(el: HTMLElement) {
+    elMapToHandlers.delete(el)
+  },
   mounted(el: HTMLElement, binding) {
     addEventListener(el, binding)
   },
@@ -29,8 +32,5 @@ const vHover: Directive = {
     }
     addEventListener(el, binding)
   },
-  beforeUnmount(el: HTMLElement) {
-    elMapToHandlers.delete(el)
-  }
 }
 export default vHover

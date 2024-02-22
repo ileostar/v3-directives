@@ -4,9 +4,9 @@
  * @LastEditTime: 2024/02/21 18:12:16
  * @description: 格式化数字为金额
  */
-import { Directive, DirectiveBinding } from 'vue'
+import type { Directive, DirectiveBinding } from 'vue'
 
-const setInnerHTML = (el: HTMLElement, binding: DirectiveBinding) => {
+function setInnerHTML(el: HTMLElement, binding: DirectiveBinding) {
   const { value } = binding
 
   const parts = String(value).split('.')
@@ -16,20 +16,18 @@ const setInnerHTML = (el: HTMLElement, binding: DirectiveBinding) => {
   const moneyArray = []
 
   for (let i = 0; i < moneyReverse.length; i++) {
-    if (i % 3 === 0 && i !== 0) {
+    if (i % 3 === 0 && i !== 0)
       moneyArray.push(',')
-    }
 
     moneyArray.push(moneyReverse[i])
   }
 
   const moneyString = moneyArray.reverse().join('')
 
-  if (parts.length > 1) {
+  if (parts.length > 1)
     el.innerHTML = `${moneyString}.${parts[1]}`
-  } else {
+  else
     el.innerHTML = moneyString
-  }
 }
 
 const vMoney: Directive = {
@@ -38,6 +36,6 @@ const vMoney: Directive = {
   },
   updated(el: HTMLElement, binding) {
     setInnerHTML(el, binding)
-  }
+  },
 }
 export default vMoney

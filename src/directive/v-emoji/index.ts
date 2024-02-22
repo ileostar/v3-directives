@@ -4,10 +4,10 @@
  * @LastEditTime: 2024/02/07 11:12:16
  * @description: 禁止输入emoji
  */
-import { Directive, DirectiveBinding } from "vue"
+import type { Directive } from 'vue'
 
 const vEmoji: Directive = {
-  mounted: function (el, binding, vnode) {
+  mounted(el, binding, vnode) {
     const handleInput = (event: Event) => {
       const inputElement = event.target as HTMLInputElement
       const value = inputElement.value
@@ -25,10 +25,9 @@ const vEmoji: Directive = {
       delete el.$destroy
     }
   },
-  unmounted: function (el) {
-    if (el.$destroy) {
+  unmounted(el) {
+    if (el.$destroy)
       el.$destroy()
-    }
   },
 }
 

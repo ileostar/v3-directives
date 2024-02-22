@@ -1,79 +1,16 @@
-<template>
-  <Popper
-    ref="popper"
-    v-slot="{
-      popperId,
-      isShown,
-      shouldMountContent,
-      skipTransition,
-      autoHide,
-      show,
-      hide,
-      handleResize,
-      onResize,
-      classes,
-      result,
-    }"
-    v-bind="$props"
-    :theme="finalTheme"
-    :target-nodes="getTargetNodes"
-    :popper-node="() => ($refs as any).popperContent.$el"
-    :class="[
-      themeClass,
-    ]"
-    @show="() => $emit('show')"
-    @hide="() => $emit('hide')"
-    @update:shown="(shown) => $emit('update:shown', shown)"
-    @apply-show="() => $emit('apply-show')"
-    @apply-hide="() => $emit('apply-hide')"
-    @close-group="() => $emit('close-group')"
-    @close-directive="() => $emit('close-directive')"
-    @auto-hide="() => $emit('auto-hide')"
-    @resize="() => $emit('resize')"
-  >
-    <slot
-      :shown="isShown"
-      :show="show"
-      :hide="hide"
-    />
-
-    <PopperContent
-      ref="popperContent"
-      :popper-id="popperId"
-      :theme="finalTheme"
-      :shown="isShown"
-      :mounted="shouldMountContent"
-      :skip-transition="skipTransition"
-      :auto-hide="autoHide"
-      :handle-resize="handleResize"
-      :classes="classes"
-      :result="result"
-      @hide="hide"
-      @resize="onResize"
-    >
-      <slot
-        name="popper"
-        :shown="isShown"
-        :hide="hide"
-      />
-    </PopperContent>
-  </Popper>
-</template>
-
 <script lang="ts">
-import { defineComponent, type PropType } from 'vue'
+import { type PropType, defineComponent } from 'vue'
+import type { Placement } from '../../../utils/popper.ts'
 import Popper from './Popper.vue'
 import PopperContent from './PopperContent.vue'
 import PopperMethods from './PopperMethods'
 import ThemeClass from './ThemeClass'
-import type { Placement } from '../../../utils/popper.ts'
 
 export type TriggerEvent = 'hover' | 'click' | 'focus' | 'touch'
 
 let Element: any = function () {}
-if (typeof window !== 'undefined') {
+if (typeof window !== 'undefined')
   Element = window.Element
-}
 
 export default defineComponent({
   name: 'VPopperWrapper',
@@ -109,7 +46,6 @@ export default defineComponent({
       default: null,
     },
 
-    // eslint-disable-next-line vue/require-prop-types
     ariaId: {
       default: null,
     },
@@ -292,28 +228,90 @@ export default defineComponent({
   },
 
   emits: {
-    show: () => true,
-    hide: () => true,
+    'show': () => true,
+    'hide': () => true,
     'update:shown': (shown: boolean) => true,
     'apply-show': () => true,
     'apply-hide': () => true,
     'close-group': () => true,
     'close-directive': () => true,
     'auto-hide': () => true,
-    resize: () => true,
+    'resize': () => true,
   },
 
   computed: {
-    finalTheme (): string {
+    finalTheme(): string {
       return this.theme ?? this.$options.vPopperTheme
     },
   },
 
   methods: {
-    getTargetNodes () {
+    getTargetNodes() {
       return Array.from(this.$el.children)
         .filter(node => node !== this.$refs.popperContent.$el)
     },
   },
 })
 </script>
+
+<template>
+  <Popper
+    ref="popper"
+    v-slot="{
+      popperId,
+      isShown,
+      shouldMountContent,
+      skipTransition,
+      autoHide,
+      show,
+      hide,
+      handleResize,
+      onResize,
+      classes,
+      result,
+    }"
+    v-bind="$props"
+    :theme="finalTheme"
+    :target-nodes="getTargetNodes"
+    :popper-node="() => ($refs as any).popperContent.$el"
+    :class="[
+      themeClass,
+    ]"
+    @show="() => $emit('show')"
+    @hide="() => $emit('hide')"
+    @update:shown="(shown) => $emit('update:shown', shown)"
+    @apply-show="() => $emit('apply-show')"
+    @apply-hide="() => $emit('apply-hide')"
+    @close-group="() => $emit('close-group')"
+    @close-directive="() => $emit('close-directive')"
+    @auto-hide="() => $emit('auto-hide')"
+    @resize="() => $emit('resize')"
+  >
+    <slot
+      :shown="isShown"
+      :show="show"
+      :hide="hide"
+    />
+
+    <PopperContent
+      ref="popperContent"
+      :popper-id="popperId"
+      :theme="finalTheme"
+      :shown="isShown"
+      :mounted="shouldMountContent"
+      :skip-transition="skipTransition"
+      :auto-hide="autoHide"
+      :handle-resize="handleResize"
+      :classes="classes"
+      :result="result"
+      @hide="hide"
+      @resize="onResize"
+    >
+      <slot
+        name="popper"
+        :shown="isShown"
+        :hide="hide"
+      />
+    </PopperContent>
+  </Popper>
+</template>

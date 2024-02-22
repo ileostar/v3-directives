@@ -4,16 +4,17 @@
  * @LastEditTime: 2024/02/21 18:12:16
  * @description: 长按触发事件
  */
-import { Directive, DirectiveBinding } from 'vue'
+import type { Directive, DirectiveBinding } from 'vue'
 import { isFunction } from '../../utils'
 
 const elMapToMouseDownHandlers: WeakMap<Element, () => void> = new WeakMap()
 
 const elMapToMouseUpHandlers: WeakMap<Element, () => void> = new WeakMap()
 
-const addEventListener = (el: Element, binding: DirectiveBinding) => {
-  const { value, arg } = binding
-  if (!isFunction(value)) return
+function addEventListener(el: Element, binding: DirectiveBinding) {
+  const { arg, value } = binding
+  if (!isFunction(value))
+    return
   let timer: number | undefined
   const pressHandler = () => {
     timer = window.setTimeout(value, arg ? Number(arg) : 300)
@@ -28,6 +29,10 @@ const addEventListener = (el: Element, binding: DirectiveBinding) => {
 }
 
 const vLongPress: Directive = {
+  beforeUnmount(el: HTMLElement) {
+    elMapToMouseDownHandlers.delete(el)
+    elMapToMouseUpHandlers.delete(el)
+  },
   mounted(el: HTMLElement, binding) {
     addEventListener(el, binding)
   },
@@ -44,9 +49,5 @@ const vLongPress: Directive = {
     }
     addEventListener(el, binding)
   },
-  beforeUnmount(el: HTMLElement) {
-    elMapToMouseDownHandlers.delete(el)
-    elMapToMouseUpHandlers.delete(el)
-  }
 }
 export default vLongPress

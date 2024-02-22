@@ -4,9 +4,9 @@
  * @LastEditTime: 2024/02/07 11:12:16
  * @description: 省略超出文本
  */
-import { Directive, DirectiveBinding } from 'vue'
+import type { Directive, DirectiveBinding } from 'vue'
 
-const handler = (el: HTMLElement, binding: DirectiveBinding) => {
+function handler(el: HTMLElement, binding: DirectiveBinding) {
   el.style.overflow = 'hidden'
   el.style.textOverflow = 'ellipsis'
   const { arg } = binding
@@ -14,10 +14,11 @@ const handler = (el: HTMLElement, binding: DirectiveBinding) => {
     el.style.display = '-webkit-box'
     el.style.webkitLineClamp = String(Number(arg))
     el.style.webkitBoxOrient = 'vertical'
-  } else {
+  }
+  else {
     el.style.whiteSpace = 'nowrap'
   }
-  el.setAttribute('title', el.textContent as string);
+  el.setAttribute('title', el.textContent as string)
 }
 
 const vEllipsis: Directive = {
@@ -26,6 +27,6 @@ const vEllipsis: Directive = {
   },
   updated(el: HTMLElement, binding) {
     handler(el, binding)
-  }
+  },
 }
 export default vEllipsis
