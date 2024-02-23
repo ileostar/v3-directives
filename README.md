@@ -48,15 +48,3 @@ app.use(VueDirectives);
 | [v-slideIn](https://v3-directives.netlify.app/zh/directives/v-slideIn.html)           | Add entry animation                               |
 | [v-throttle](https://v3-directives.netlify.app/zh/directives/v-throttle.html)         | Throttling function                               |
 | [v-waterMarker](https://v3-directives.netlify.app/zh/directives/v-waterMarker.html)   | Add custom watermark                              |
-
-<style scoped>
-  table {
-    display: table;
-    width: 100%;
-    border-collapse: collapse;
-  }
-  table a {
-    color: #4c86ad;
-    text-decoration: none;
-  }
-</style>
