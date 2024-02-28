@@ -16,7 +16,7 @@ const members = [
     name: 'LeoStar',
     title: 'A not-so-serious front-end Coder',
     links: [
-      { icon: 'github', link: 'https://github.com/030liuxinghao' },
+      { icon: 'github', link: 'https://github.com/ileostar' },
       { icon: 'x', link: 'https://twitter.com/030LeoStar' }
     ]
   }

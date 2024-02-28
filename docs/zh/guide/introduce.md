@@ -1,6 +1,6 @@
 # 简介
 
-**v3-directives** 是一套基于[Vue3](https://cn.vuejs.org/)的自定义指令库，旨在提供丰富而强大的指令功能，帮助开发者更轻松地扩展和定制 Vue3 应用程序。
+<span>v3-directives</span> 是一套基于[Vue3](https://cn.vuejs.org/)的自定义指令库，旨在提供丰富而强大的指令功能，帮助开发者更轻松地扩展和定制 Vue3 应用程序。
 
 通过 **v3-directives**，您可以用一种简单、灵活的方式改变元素的行为和样式。帮助您增强用户交互体验，优化页面性能。
 
@@ -45,3 +45,10 @@ const value = ref('你将复制这个值')
   </button>
 </template>
 ```
+
+<style scoped>
+span {
+  color: #4DFFA8;
+  font-weight: bold;
+}
+</style>

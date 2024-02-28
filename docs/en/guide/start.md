@@ -19,3 +19,10 @@ const app = createApp(App);
 app.use(router).mount("#app");
 app.use(LeoDirectives);
 ```
+
+<style scoped>
+span {
+  color: #4DFFA8;
+  font-weight: bold;
+}
+</style>

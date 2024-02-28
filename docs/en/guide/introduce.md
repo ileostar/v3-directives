@@ -1,6 +1,6 @@
 # Introduction
 
-**v3-directives** is a custom directive library based on [Vue3](https://cn.vuejs.org/). It aims to provide rich and powerful directive functionalities to help developers easily extend and customize Vue3 applications.
+<span>v3-directives</span> is a custom directive library based on [Vue3](https://vuejs.org/). It aims to provide rich and powerful directive functionalities to help developers easily extend and customize Vue3 applications.
 
 With **v3-directives**, you can change the behavior and style of elements in a simple and flexible way. It helps enhance user interaction experience and optimize page performance.
 
@@ -45,3 +45,10 @@ const value = ref('Value to be copied')
   </button>
 </template>
 ```
+
+<style scoped>
+span {
+  color: #4DFFA8;
+  font-weight: bold;
+}
+</style>
