@@ -1,4 +1,4 @@
-# v3-directives
+# ☠v3-directives
 
 ![screenshot](https://cdn.jsdelivr.net/gh/ileostar/picx-images/local/5465730512d71722380d1ecd6d7db6ae.png)
 
@@ -7,7 +7,7 @@
 ![Static Badge](https://img.shields.io/npm/v/@ileostar/v3-directives?color=409eff)
 ![Static Badge](https://img.shields.io/github/stars/ileostar/v3-directives?style=social)
 
-## Usage
+## 🕹Usage
 
 1. Install package （安装依赖）
 
@@ -24,36 +24,169 @@ app.use(router).mount("#app");
 app.use(VueDirectives);
 ```
 
-## Directives
+## 🧩Directives
 
-| Directive                                                                             | Description                                       |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------- |
-| [v-backtop](https://v3-directives.netlify.app/zh/directives/v-backtop.html)           | Add a return to top function for an element       |
-| [v-clickOutside](https://v3-directives.netlify.app/zh/directives/v-clickOutside.html) | Event when clicking outside the element triggers  |
-| [v-copy](https://v3-directives.netlify.app/zh/directives/v-copy.html)                 | Copy the passed value to the clipboard            |
-| [v-debounce](https://v3-directives.netlify.app/zh/directives/v-debounce.html)         | Anti-shaking function                             |
-| [v-doubleClick](https://v3-directives.netlify.app/zh/directives/v-doubleClick.html)   | Trigger an event on double-click                  |
-| [v-draggable](https://v3-directives.netlify.app/zh/directives/v-draggable.html)       | Makes elements draggable                          |
-| [v-ellipsis](https://v3-directives.netlify.app/zh/directives/v-ellipsis.html)         | Omit excess text                                  |
-| [v-emoji](https://v3-directives.netlify.app/zh/directives/v-emoji.html)               | Prohibit emoji input                              |
-| [v-empty](https://v3-directives.netlify.app/zh/directives/v-empty.html)               | Used to display empty status                      |
-| [v-flicker](https://v3-directives.netlify.app/zh/directives/v-flicker.html)           | Element flicker                                   |
-| [v-focus](https://v3-directives.netlify.app/zh/directives/v-focus.html)               | Input box autofocus                               |
-| [v-highlight](https://v3-directives.netlify.app/zh/directives/v-highlight.html)       | Text highlighting                                 |
-| [v-hover](https://v3-directives.netlify.app/zh/directives/v-hover.html)               | Triggers a callback after the element             |
-| [v-input](https://v3-directives.netlify.app/zh/directives/v-input.html)               | Input formatting                                  |
-| [v-lazyImg](https://v3-directives.netlify.app/zh/directives/v-lazyImg.html)           | Lazy image loading                                |
-| [v-loading](https://v3-directives.netlify.app/zh/directives/v-loading.html)           | Add loading animation                             |
-| [v-longpress](https://v3-directives.netlify.app/zh/directives/v-longpress.html)       | Trigger event when long pressing an element       |
-| [v-money](https://v3-directives.netlify.app/zh/directives/v-money.html)               | Format numbers into money format                  |
-| [v-onOnce](https://v3-directives.netlify.app/zh/directives/v-onOnce.html)             | Only one callback is triggered                    |
-| [v-permission](https://v3-directives.netlify.app/zh/directives/v-permission.html)     | Rapid realization of authentication               |
-| [v-resize](https://v3-directives.netlify.app/zh/directives/v-resize.html)             | Response to resize the element                    |
-| [v-ripple](https://v3-directives.netlify.app/zh/directives/v-ripple.html)             | Add ripple dynamic effects to the clicked element |
-| [v-slideIn](https://v3-directives.netlify.app/zh/directives/v-slideIn.html)           | Add entry animation                               |
-| [v-throttle](https://v3-directives.netlify.app/zh/directives/v-throttle.html)         | Throttling function                               |
-| [v-waterMarker](https://v3-directives.netlify.app/zh/directives/v-waterMarker.html)   | Add custom watermark                              |
+<table>
+	<thead >
+		<tr>
+			<th>Directive</th>
+			<th style="width: 80%">Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				<a href="https://v3-directives.netlify.app/zh/directives/v-backtop.html">v-backtop</a>
+			</td>
+			<td>Add a return to top function for an element</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="https://v3-directives.netlify.app/zh/directives/v-clickOutside.html">v-clickOutside</a>
+			</td>
+			<td>Event when clicking outside the element triggers</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="https://v3-directives.netlify.app/zh/directives/v-copy.html">v-copy</a>
+			</td>
+			<td>Copy the passed value to the clipboard</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="https://v3-directives.netlify.app/zh/directives/v-debounce.html">v-debounce</a>
+			</td>
+			<td>Anti-shaking function</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="https://v3-directives.netlify.app/zh/directives/v-doubleClick.html">v-doubleClick</a>
+			</td>
+			<td>Trigger an event on double-click</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="https://v3-directives.netlify.app/zh/directives/v-draggable.html">v-draggable</a>
+			</td>
+			<td>Makes elements draggable</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="https://v3-directives.netlify.app/zh/directives/v-ellipsis.html">v-ellipsis</a>
+			</td>
+			<td>Omit excess text</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="https://v3-directives.netlify.app/zh/directives/v-emoji.html">v-emoji</a>
+			</td>
+			<td>Prohibit emoji input</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="https://v3-directives.netlify.app/zh/directives/v-empty.html">v-empty</a>
+			</td>
+			<td>Used to display empty status</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="https://v3-directives.netlify.app/zh/directives/v-flicker.html">v-flicker</a>
+			</td>
+			<td>Element flicker</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="https://v3-directives.netlify.app/zh/directives/v-focus.html">v-focus</a>
+			</td>
+			<td>Input box autofocus</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="https://v3-directives.netlify.app/zh/directives/v-highlight.html">v-highlight</a>
+			</td>
+			<td>Text highlighting</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="https://v3-directives.netlify.app/zh/directives/v-hover.html">v-hover</a>
+			</td>
+			<td>Triggers a callback after the element</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="https://v3-directives.netlify.app/zh/directives/v-input.html">v-input</a>
+			</td>
+			<td>Input formatting</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="https://v3-directives.netlify.app/zh/directives/v-lazyImg.html">v-lazyImg</a>
+			</td>
+			<td>Lazy image loading</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="https://v3-directives.netlify.app/zh/directives/v-loading.html">v-loading</a>
+			</td>
+			<td>Add loading animation</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="https://v3-directives.netlify.app/zh/directives/v-longpress.html">v-longpress</a>
+			</td>
+			<td>Trigger event when long pressing an element</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="https://v3-directives.netlify.app/zh/directives/v-money.html">v-money</a>
+			</td>
+			<td>Format numbers into money format</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="https://v3-directives.netlify.app/zh/directives/v-onOnce.html">v-onOnce</a>
+			</td>
+			<td>Only one callback is triggered</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="https://v3-directives.netlify.app/zh/directives/v-permission.html">v-permission</a>
+			</td>
+			<td>Rapid realization of authentication</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="https://v3-directives.netlify.app/zh/directives/v-resize.html">v-resize</a>
+			</td>
+			<td>Response to resize the element</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="https://v3-directives.netlify.app/zh/directives/v-ripple.html">v-ripple</a>
+			</td>
+			<td>Add ripple dynamic effects to the clicked element</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="https://v3-directives.netlify.app/zh/directives/v-slideIn.html">v-slideIn</a>
+			</td>
+			<td>Add entry animation</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="https://v3-directives.netlify.app/zh/directives/v-throttle.html">v-throttle</a>
+			</td>
+			<td>Throttling function</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="https://v3-directives.netlify.app/zh/directives/v-waterMarker.html">v-waterMarker</a>
+			</td>
+			<td>Add custom watermark</td>
+		</tr>
+	</tbody>
+</table>
 
-## Contributors
+## 💖Contributors
 
-Contributions are welcome, PR is welcome
+Contributions are welcome, PR is welcome, More references [Participate in Open source](https://v3-directives.netlify.app/en/about/contribution.html)
