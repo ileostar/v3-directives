@@ -1,4 +1,4 @@
-# v3-directives
+# ☠v3-directives
 
 ![screenshot](https://cdn.jsdelivr.net/gh/ileostar/picx-images/local/5465730512d71722380d1ecd6d7db6ae.png)
 
@@ -7,7 +7,7 @@
 ![Static Badge](https://img.shields.io/npm/v/@ileostar/v3-directives?color=409eff)
 ![Static Badge](https://img.shields.io/github/stars/ileostar/v3-directives?style=social)
 
-## Usage
+## 🕹Usage
 
 1. Install package （安装依赖）
 
@@ -24,7 +24,7 @@ app.use(router).mount("#app");
 app.use(VueDirectives);
 ```
 
-## Directives
+## 🧩Directives
 
 | Directive                                                                             | Description                                       |
 | ------------------------------------------------------------------------------------- | ------------------------------------------------- |
@@ -54,6 +54,6 @@ app.use(VueDirectives);
 | [v-throttle](https://v3-directives.netlify.app/zh/directives/v-throttle.html)         | Throttling function                               |
 | [v-waterMarker](https://v3-directives.netlify.app/zh/directives/v-waterMarker.html)   | Add custom watermark                              |
 
-## Contributors
+## 💖Contributors
 
-Contributions are welcome, PR is welcome
+Contributions are welcome, PR is welcome, More references [Participate in Open source](https://v3-directives.netlify.app/en/about/contribution.html)
