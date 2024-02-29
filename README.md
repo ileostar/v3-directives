@@ -1,6 +1,6 @@
 # v3-directives
 
-![](/screenshot.png)
+![](./public//screenshot.png)
 
 ☠Vue3 directives 自定义指令库: <a href="https://v3-directives.netlify.app/">📖 在线文档</a>
 
