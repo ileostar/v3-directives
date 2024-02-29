@@ -26,8 +26,8 @@ app.use(VueDirectives);
 
 ## Directives
 
-| Directive                                                                           | Description                                       |
-| ----------------------------------------------------------------------------------- | ------------------------------------------------- |
+| Directive                                                                             | Description                                       |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------- |
 | [v-backtop](https://v3-directives.netlify.app/zh/directives/v-backtop.html)           | Add a return to top function for an element       |
 | [v-clickOutside](https://v3-directives.netlify.app/zh/directives/v-clickOutside.html) | Event when clicking outside the element triggers  |
 | [v-copy](https://v3-directives.netlify.app/zh/directives/v-copy.html)                 | Copy the passed value to the clipboard            |
