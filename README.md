@@ -1,6 +1,11 @@
 # v3-directives
 
-☠Vue3 directives 自定义指令库 <a href="https://v3-directives.netlify.app/">📖 在线文档</a>
+[![](./screenshots/screenshot.png)](https://v3-directives.netlify.app/)
+
+☠Vue3 directives 自定义指令库: <a href="https://v3-directives.netlify.app/">📖 在线文档</a>
+
+![Static Badge](https://img.shields.io/npm/v/@ileostar/v3-directives?color=409eff)
+![Static Badge](https://img.shields.io/github/stars/ileostar/v3-directives?style=social)
 
 ## Usage
 
@@ -48,3 +53,7 @@ app.use(VueDirectives);
 | [v-slideIn](https://v3-directives.netlify.app/zh/directives/v-slideIn.html)           | Add entry animation                               |
 | [v-throttle](https://v3-directives.netlify.app/zh/directives/v-throttle.html)         | Throttling function                               |
 | [v-waterMarker](https://v3-directives.netlify.app/zh/directives/v-waterMarker.html)   | Add custom watermark                              |
+
+## Contributors
+
+Contributions are welcome, PR is welcome
