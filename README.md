@@ -1,6 +1,6 @@
 # v3-directives
 
-<img src="public/screenshot.png" />
+![screenshot](https://cdn.jsdelivr.net/gh/ileostar/picx-images/local/5465730512d71722380d1ecd6d7db6ae.png)
 
 ☠Vue3 directives 自定义指令库: <a href="https://v3-directives.netlify.app/">📖 在线文档</a>
 
