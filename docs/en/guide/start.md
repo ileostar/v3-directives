@@ -5,7 +5,7 @@ Please use [**Vue3.0**](https://cn.vuejs.org/) or above as the application frame
 ## Installation
 
 ```bash
-pnpm install @ileostar/v3-directives --save
+pnpm add @ileostar/v3-directives
 # Or use npm
 npm install @ileostar/v3-directives --save
 ```

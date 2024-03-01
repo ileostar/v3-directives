@@ -12,6 +12,8 @@
 1. Install package （安装依赖）
 
 ```bash
+pnpm add @ileostar/v3-directives
+# or
 npm install @ileostar/v3-directives --save
 ```
 

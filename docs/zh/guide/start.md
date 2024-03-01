@@ -5,7 +5,7 @@
 ## 安装
 
 ```bash
-pnpm install @ileostar/v3-directives --save
+pnpm add @ileostar/v3-directives
 # 或者使用 npm
 npm install @ileostar/v3-directives --save
 ```
