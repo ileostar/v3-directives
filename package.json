@@ -1,7 +1,7 @@
 {
   "name": "@ileostar/v3-directives",
   "version": "1.0.2",
-  "packageManager": "pnpm@8.15.3",
+  "packageManager": "pnpm@8.15.4",
   "description": "Custom Vue3 directives",
   "author": "ileostar <hi@leostar.top> (https://github.com/ileostar)",
   "license": "MIT",
@@ -37,7 +37,8 @@
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
-    "release": "bumpp --commit --push --tag && npm publish"
+    "release": "bumpp --commit --push --tag && npm publish",
+    "up": "taze major -I"
   },
   "publishConfig": {
     "access": "public",
@@ -45,13 +46,13 @@
   },
   "dependencies": {
     "@floating-ui/dom": "^1.6.3",
-    "vue": "^3.4.19",
+    "vue": "^3.4.21",
     "vue-resize": "^1.0.1",
-    "vue-router": "^4.2.5"
+    "vue-router": "^4.3.0"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.6.4",
-    "@types/node": "^20.11.19",
+    "@antfu/eslint-config": "^2.7.0",
+    "@types/node": "^20.11.24",
     "bumpp": "^9.3.0",
     "eslint": "npm:eslint-ts-patch@8.56.0-0",
     "eslint-plugin-format": "^0.1.0",
@@ -59,6 +60,7 @@
     "esno": "^4.0.0",
     "lint-staged": "^15.2.2",
     "simple-git-hooks": "^2.9.0",
+    "taze": "^0.13.3",
     "tsup": "^8.0.2",
     "typescript": "^5.3.3",
     "vitepress": "1.0.0-rc.41"
