@@ -12,16 +12,15 @@ function isBelowViewport(el: HTMLElement) {
 }
 
 function handleScroll() {
-  const elements = document.querySelectorAll('[v-slideIn]')
+  const elements = document.querySelectorAll('[v-slide-in]')
   elements.forEach((el: any) => {
     if (isBelowViewport(el))
       return
 
     const animation = map.get(el)
-    if (animation && !el.hasAttribute('v-slideIn-played')) {
+    if (animation) {
       animation.play()
-      el.removeAttribute('v-slideIn')
-      el.setAttribute('v-slideIn-played', '') // Add a flag to mark the animation as played
+      el.removeAttribute('v-slide-in')
     }
   })
 }
@@ -54,7 +53,7 @@ const vSlideIn: Directive = {
     )
     animation.pause()
     map.set(el, animation)
-    el.setAttribute('v-slideIn', '') // 添加标记，表示需要进行动画
+    el.setAttribute('v-slide-in', '') // 添加标记，表示需要进行动画
 
     window.addEventListener('scroll', handleScroll)
   },
