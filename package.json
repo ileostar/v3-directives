@@ -63,7 +63,7 @@
     "taze": "^0.13.3",
     "tsup": "^8.0.2",
     "typescript": "^5.3.3",
-    "vitepress": "1.0.0-rc.41"
+    "vitepress": "1.0.0-rc.44"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
