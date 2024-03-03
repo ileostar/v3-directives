@@ -1,11 +1,5 @@
-/**
- * @description: v-debounce指令
- * @LastEditors: ileostar
- * @LastEditTime: 2024/02/07 11:12:16
- * @description: 防抖功能
- */
 import type { Directive, DirectiveBinding } from 'vue'
-import { isFunction } from '../../utils'
+import { isFunction } from '../../utils/index'
 
 const elMapToHandlers: WeakMap<Element, () => void> = new WeakMap()
 
@@ -23,12 +17,19 @@ function addEventListener(el: Element, binding: DirectiveBinding): void {
   let timer: undefined | number
 
   const handler = (): void => {
-    if (timer)
-      return
-    timer = window.setTimeout(() => {
-      value()
-      timer = undefined
-    }, delay)
+    if (timer === undefined) {
+      timer = window.setTimeout(() => {
+        value()
+        timer = undefined
+      }, delay)
+    }
+    else {
+      window.clearTimeout(timer)
+      timer = window.setTimeout(() => {
+        value()
+        timer = undefined
+      }, delay)
+    }
   }
 
   elMapToHandlers.set(el, handler)
@@ -58,5 +59,4 @@ const vDebounce: Directive = {
     addEventListener(el, binding)
   },
 }
-
 export default vDebounce
