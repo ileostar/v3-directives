@@ -2,7 +2,7 @@
 
 ![screenshot](https://cdn.jsdelivr.net/gh/ileostar/picx-images/local/5465730512d71722380d1ecd6d7db6ae.png)
 
-☠Vue3 directives 自定义指令库: <a href="https://v3-directives.leostar.top/">📖 在线文档</a>
+☠Vue3 directives 自定义指令库: [📖 在线文档](https://v3-directives.leostar.top/)
 
 ![Static Badge](https://img.shields.io/npm/v/@ileostar/v3-directives?color=409eff)
 ![Static Badge](https://img.shields.io/github/stars/ileostar/v3-directives?style=social)
