@@ -1,11 +1,11 @@
 {
   "name": "@ileostar/v3-directives",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "packageManager": "pnpm@8.15.4",
   "description": "Custom Vue3 directives",
   "author": "ileostar <hi@leostar.top> (https://github.com/ileostar)",
   "license": "MIT",
-  "homepage": "https://github.com/antfu/eslint-config",
+  "homepage": "https://github.com/ileostar/v3-directives",
   "bugs": {
     "url": "https://github.com/ileostar/v3-directives/issues"
   },
