@@ -19,6 +19,7 @@ const vInput: Directive = {
     const restrict = binding.value || 10
     const types = ['number', 'decimal', 'customize']
     if (!_type || !types.includes(_type))
+      // eslint-disable-next-line no-console
       return console.log(`使用v-input指令需要选择特定功能：v-input:type="restrictValue";  type = ${types.join('/')}.`)
     el.$handler = (el: any) => {
       switch (_type) {
@@ -31,13 +32,15 @@ const vInput: Directive = {
           el.value = el.value.replace(/[^\d.]/g, '') // 清除数字和'.'以外的字符
           el.value = el.value.replace(/\.{2,}/g, '.') // 连续两个'.', 只保留第一个'.'
           el.value = el.value.replace('.', '$#$').replace(/\./g, '').replace('$#$', '.') // 隔着字符, 也保证只有一个'.'
+          // eslint-disable-next-line no-case-declarations
           const regexPattern = new RegExp(`^(-)*(\\d+)\\.(\\d{0,${restrict}}).*$`)
           el.value = el.value.replace(regexPattern, '$1$2.$3') // 只能输入两位小数
-          !el.value.includes('.') && el.value != '' && (el.value = Number.parseFloat(el.value)) // 保证不会出现重复的: 00, 01, 02 ...
+          !el.value.includes('.') && el.value !== '' && (el.value = Number.parseFloat(el.value)) // 保证不会出现重复的: 00, 01, 02 ...
           el.value.includes('.') && el.value.length === 1 && (el.value = '') // 第一位不能以'.'开头
           break
         // 自定义, 由data-rule提供规则
         case 'customize':
+          // eslint-disable-next-line no-case-declarations
           const rule = restrict && new RegExp(restrict) // 字符串正则转正则表达式
           el.value = el.value.replace(rule, '')
           break

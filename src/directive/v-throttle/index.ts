@@ -13,7 +13,6 @@ function addEventListener(el: Element, binding: DirectiveBinding): void {
   const delay = arg ? Number(arg.split('-')[1]) : 300
   const eventName = arg ? arg.split('-')[0] : 'click'
 
-  let timer: number | undefined
   let lastExecTime = 0
 
   const handler = (): void => {

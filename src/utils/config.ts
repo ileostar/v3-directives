@@ -1,3 +1,4 @@
+// eslint-disable-next-line ts/ban-ts-comment
 // @ts-nocheck
 export type FloatingVueConfig = any // @TODO
 

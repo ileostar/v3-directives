@@ -15,9 +15,11 @@ function addEventListener(el: Element, binding: DirectiveBinding) {
     navigator.clipboard
       .writeText(el.getAttribute('copyValue') || '')
       .then(() => {
+        // eslint-disable-next-line no-alert
         window.alert('复制成功！')
       })
       .catch(() => {
+        // eslint-disable-next-line no-alert
         window.alert('复制失败！')
       })
   }

@@ -7,7 +7,7 @@
 import type { Directive } from 'vue'
 
 const vEmoji: Directive = {
-  mounted(el, binding, vnode) {
+  mounted(el, _binding, _vnode) {
     const handleInput = (event: Event) => {
       const inputElement = event.target as HTMLInputElement
       const value = inputElement.value

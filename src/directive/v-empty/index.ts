@@ -23,14 +23,13 @@ function insertEmptyState(el: HTMLElement, content: string, img: string) {
 }
 
 const vEmpty: Directive = {
-  beforeMount(el: HTMLElement, binding: DirectiveBinding) {
+  beforeMount(el: HTMLElement, _binding: DirectiveBinding) {
     originalContent = el.innerHTML
   },
   mounted(el: HTMLElement, binding: DirectiveBinding) {
     el.style.position = el.style.position || 'relative'
 
     const { content = '暂无数据', img, visible } = binding.value
-    console.log(visible, content, img)
 
     const insertContent = () => {
       el.innerHTML = originalContent

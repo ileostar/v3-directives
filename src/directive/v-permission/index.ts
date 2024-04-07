@@ -20,15 +20,19 @@ const vPermission: Directive = {
 
     // 获取需要的权限标识，即元素给指令传进来的参数值
     let inValue
-    if (typeof binding.value === 'string')
+    if (typeof binding.value === 'string') {
       inValue = binding.value
-    else if (Array.isArray(binding.value))
+    }
+    else if (Array.isArray(binding.value)) {
       inValue = binding.value.join(';')
-    else
+    }
+    else {
+      // eslint-disable-next-line no-console
       console.log('数据格式不正确，请输入字符串（以分号分隔）或数组')
+    }
 
-    let passText = inValue; let // 可以是多个值，中间以分号分隔
-      passTextArr = []// 将权限解析到数组中
+    let passText = inValue // 可以是多个值，中间以分号分隔
+    let passTextArr = []// 将权限解析到数组中
     if (!passText)
       passText = ''
     passTextArr = passText.split(';')
