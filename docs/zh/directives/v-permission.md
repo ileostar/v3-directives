@@ -47,6 +47,10 @@ v-permission="`permissionList`"
 
 权限列表：`['add', 'del']`，存在其一则显示，否则隐藏元素
 
+:::tip
+请不要和 **v-if** 混用！
+:::
+
 <style scoped>
 button {
     border: 1px solid #ccc;

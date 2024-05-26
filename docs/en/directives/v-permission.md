@@ -47,6 +47,10 @@ v-permission="`permissionList`"
 
 Permission list: `['add',' del']`, one of which is displayed, otherwise the element is hidden
 
+:::tip
+Please do not mix with **v-if**!
+:::
+
 <style scoped>
 button {
     border: 1px solid #ccc;
