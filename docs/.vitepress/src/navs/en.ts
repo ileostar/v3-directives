@@ -15,6 +15,10 @@ export default function getNavs() {
           ],
         },
         {
+          text: 'Communication',
+          items: [{ text: 'Communication group', link: '/en/about/communication' }],
+        },
+        {
           text: 'Concerning',
           items: [{ text: 'Development Team', link: '/en/about/team' }],
         },

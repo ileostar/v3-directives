@@ -31,6 +31,12 @@ export const sidebar = {
       ],
     },
     {
+      text: 'Communication',
+      items: [
+        { text: 'Communication group', link: '/en/about/communication' },
+      ],
+    },
+    {
       text: 'Concerning',
       items: [
         { text: 'Development Team', link: '/en/about/team' },
