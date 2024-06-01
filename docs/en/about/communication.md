@@ -2,4 +2,4 @@
 
 Note when adding wechat
 
-<img src="/wx.jpg" width="70%"/>
+<img src="../../public/wx.jpg" width="70%"/>
