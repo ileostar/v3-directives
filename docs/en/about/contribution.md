@@ -13,7 +13,7 @@ If you do not understand the custom instructions, you can first read the officia
 │   ├── .vitepress        // vitepress config
 │   ├── en                // English
 │   ├── public
-│   ├── zh                // Chiners
+│   ├── zh                // Chinese
 │   └── index.ts
 ├── src
 │   ├── directive         // All Directives
@@ -24,7 +24,7 @@ If you do not understand the custom instructions, you can first read the officia
 ├── .editorconfig         // IDE config
 ├── .npmrc                // npm config
 ├── netlify.toml          // netlify deploy config
-├── eslint.config.ts      // ESLint config
+├── eslint.config.mjs     // ESLint config
 ├── package.json          // Project configuration
 ├── tsup.config.ts        // tsup config
 ├── README.md             // Project description document
