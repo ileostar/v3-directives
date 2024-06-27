@@ -1,6 +1,6 @@
 {
   "name": "@ileostar/v3-directives",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "packageManager": "pnpm@9.1.4",
   "description": "Custom Vue3 directives",
   "author": "ileostar <hi@leostar.top> (https://github.com/ileostar)",
