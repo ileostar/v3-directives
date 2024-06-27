@@ -52,7 +52,7 @@ export {
 }
 ```
 
-例子：
+Example:
 
 ```typescript
 // Introduce vDebounce as required
