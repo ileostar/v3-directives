@@ -56,5 +56,7 @@ export {
 
 ```typescript
 // 根据需求引入vDebounce
+import { vDebounce } from '@ileostar/v3-directives'
+
 app.directives('vDebounce', vDebounce)
 ```
