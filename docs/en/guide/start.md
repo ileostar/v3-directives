@@ -20,6 +20,45 @@ app.use(router).mount("#app");
 app.use(LeoDirectives);
 ```
 
+You can also introduce it on demand
+
+```typescript
+export {
+  backtop as vBacktop,
+  clickOutside as vClickOutside,
+  copy as vCopy,
+  debounce as vDebounce,
+  doubleClick as vDoubleClick,
+  draggable as vDraggable,
+  ellipsis as vEllipsis,
+  emoji as vEmoji,
+  empty as vEmpty,
+  flicker as vFlicker,
+  focus as vFocus,
+  highlight as vHighlight,
+  hover as vHover,
+  input as vInput,
+  lazyImg as vLazyImg,
+  loading as vLoading,
+  longpress as vLongpress,
+  money as vMoney,
+  onOnce as vOnOnce,
+  permission as vPermission,
+  resize as vResize,
+  ripple as vRipple,
+  slideIn as vSlideIn,
+  throttle as vThrottle,
+  waterMarker as vWaterMarker
+}
+```
+
+例子：
+
+```typescript
+// Introduce vDebounce as required
+app.directives('vDebounce', vDebounce)
+```
+
 <style scoped>
 span {
   color: #4DFFA8;

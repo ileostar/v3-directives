@@ -39,5 +39,9 @@
     "yaml",
     "toml"
   ],
-  "nuxt.isNuxtApp": false
+  "nuxt.isNuxtApp": false,
+  "cSpell.words": [
+    "backtop",
+    "longpress"
+  ]
 }
